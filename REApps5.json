@@ -9,13 +9,13 @@
   "dashboardMetadata": {
     "name": "Remote Employee Applications Overview",
     "shared": false,
-    "owner": "techshadyjk@ruxitlabs.com",
+    "owner": "MyEmail",
     "sharingDetails": {
       "linkShared": true,
       "published": false
     },
     "dashboardFilter": {
-      "timeframe": "l_24_HOURS",
+      "timeframe": "l_2_HOURS",
       "managementZone": null
     }
   },
@@ -375,6 +375,21 @@
         },
         "filtersPerEntityType": {}
       }
-    }
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 1634,
+        "width": 152,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "![BackButton]()"
   ]
 }

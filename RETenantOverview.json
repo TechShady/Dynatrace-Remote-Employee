@@ -3,19 +3,19 @@
     "configurationVersions": [
       3
     ],
-    "clusterVersion": "1.191.0.20200316-194001"
+    "clusterVersion": "1.191.0.20200318-160539"
   },
-  "id": "dd92a0fb-c846-4bde-b579-a5d82cd3a516",
+  "id": "fbe8d3b1-ccb9-480c-9e5d-0e1b8b4da734",
   "dashboardMetadata": {
-    "name": "🚀 Remote Employee Tenant Overview",
-    "shared": false,
-    "owner": "techshadyjk@ruxitlabs.com",
+    "name": "\ud83d\ude80 Remote Employee Tenant Overview",
+    "shared": true,
+    "owner": "MyEmail",
     "sharingDetails": {
       "linkShared": true,
-      "published": false
+      "published": true
     },
     "dashboardFilter": {
-      "timeframe": "l_72_HOURS",
+      "timeframe": "l_2_HOURS",
       "managementZone": null
     },
     "tags": [
@@ -159,8 +159,8 @@
       "bounds": {
         "top": 0,
         "left": 1368,
-        "width": 304,
-        "height": 304
+        "width": 152,
+        "height": 152
       },
       "tileFilter": {
         "timeframe": null,
@@ -175,7 +175,7 @@
       "configured": true,
       "bounds": {
         "top": 0,
-        "left": 684,
+        "left": 304,
         "width": 304,
         "height": 304
       },
@@ -190,8 +190,8 @@
       "configured": true,
       "bounds": {
         "top": 0,
-        "left": 342,
-        "width": 304,
+        "left": 836,
+        "width": 228,
         "height": 304
       },
       "tileFilter": {
@@ -229,8 +229,8 @@
       "configured": true,
       "bounds": {
         "top": 0,
-        "left": 1026,
-        "width": 304,
+        "left": 608,
+        "width": 228,
         "height": 304
       },
       "tileFilter": {
@@ -323,7 +323,7 @@
       }
     },
     {
-      "name": "Custom Links ▼",
+      "name": "All Apps Links ▼",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
@@ -367,7 +367,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "![Application Links1]()\n## [Remote Employee App Overview](#dashboard;id=e75c3a2a-731d-49c0-8048-3206a4acca77)\n![]()\n"
+      "markdown": ""
     },
     {
       "name": "Markdown",
@@ -431,29 +431,52 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "![Custom Links1]()\n"
+      "markdown": "![Application Links1]()\n## [Remote Employee App Overview](#dashboard;id=bbbbbbbb-0003-0000-0000-000000000001)\n![]()\n"
     },
     {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
+      "name": "Network status",
+      "tileType": "NETWORK_MEDIUM",
       "configured": true,
       "bounds": {
-        "top": 304,
-        "left": 0,
-        "width": 836,
-        "height": 380
+        "top": 152,
+        "left": 1368,
+        "width": 304,
+        "height": 152
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
+      }
+    },
+    {
+      "name": "Network metrics",
+      "tileType": "NETWORK",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 1064,
+        "width": 304,
+        "height": 304
       },
-      "customName": "Duration",
-      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", avg(useraction.duration) as \"Duration\", count(usersession.userSessionId) as \"Requests\" from usersession",
-      "type": "LINE_CHART",
-      "visualizationConfig": {
-        "hasAxisBucketing": true
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Problems",
+      "tileType": "OPEN_PROBLEMS",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 1520,
+        "width": 152,
+        "height": 152
       },
-      "limit": 50
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
     },
     {
       "name": "User Sessions Query",
@@ -470,7 +493,7 @@
         "managementZone": null
       },
       "customName": "Errors",
-      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", sum(usersession.totalErrorCount) as \"Errors\", count(usersession.userSessionId) as \"Requests\" from usersession",
+      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", sum(usersession.totalErrorCount) as \"Errors\", count(usersession.userSessionId) as \"Requests\" from usersession",
       "type": "LINE_CHART",
       "visualizationConfig": {
         "hasAxisBucketing": true
@@ -482,19 +505,21 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 1330,
+        "top": 304,
         "left": 0,
-        "width": 304,
-        "height": 304
+        "width": 836,
+        "height": 380
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
-      "query": "select sum(totalerrorcount) as \"Errors\" from usersession",
-      "type": "SINGLE_VALUE",
-      "timeFrameShift": "dynamic",
+      "customName": "Duration",
+      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", avg(useraction.duration) as \"Duration\", count(usersession.userSessionId) as \"Requests\" from usersession",
+      "type": "LINE_CHART",
+      "visualizationConfig": {
+        "hasAxisBucketing": true
+      },
       "limit": 50
     }
   ]

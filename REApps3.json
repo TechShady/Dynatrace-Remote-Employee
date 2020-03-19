@@ -15,7 +15,7 @@
       "published": false
     },
     "dashboardFilter": {
-      "timeframe": "24_HOURS",
+      "timeframe": "l_24_HOURS",
       "managementZone": null
     }
   },

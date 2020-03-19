@@ -144,7 +144,7 @@
       "bounds": {
         "top": 0,
         "left": 0,
-        "width": 304,
+        "width": 266,
         "height": 304
       },
       "tileFilter": {
@@ -455,7 +455,7 @@
       "bounds": {
         "top": 0,
         "left": 1064,
-        "width": 304,
+        "width": 266,
         "height": 304
       },
       "tileFilter": {

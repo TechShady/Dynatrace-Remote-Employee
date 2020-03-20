@@ -359,7 +359,7 @@
               "metric": "builtin:apps.web.countOfErrorsDuringUserActions",
               "aggregation": "NONE",
               "percentile": null,
-              "type": " BAR",
+              "type": "BAR",
               "entityType": "APPLICATION",
               "dimensions": [
                 {

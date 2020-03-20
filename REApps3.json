@@ -349,7 +349,7 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "Error Count vs Load",
+        "customName": "Error Count",
         "defaultName": "Custom chart",
         "chartConfig": {
           "legendShown": true,
@@ -359,7 +359,7 @@
               "metric": "builtin:apps.web.countOfErrorsDuringUserActions",
               "aggregation": "NONE",
               "percentile": null,
-              "type": "LINE",
+              "type": " BAR",
               "entityType": "APPLICATION",
               "dimensions": [
                 {
@@ -371,58 +371,10 @@
               ],
               "sortAscending": false,
               "sortColumn": false,
-              "aggregationRate": "TOTAL"
-            },
-            {
-              "metric": "builtin:apps.web.actionDuration.load.browser",
-              "aggregation": "AVG",
-              "percentile": null,
-              "type": "BAR",
-              "entityType": "APPLICATION",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "Application",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": false,
-              "aggregationRate": "TOTAL"
-            },
-            {
-              "metric": "builtin:apps.web.actionDuration.xhr.browser",
-              "aggregation": "AVG",
-              "percentile": null,
-              "type": "BAR",
-              "entityType": "APPLICATION",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "Application",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": true,
               "aggregationRate": "TOTAL"
             }
           ],
-          "resultMetadata": {
-            "APPLICATION-036DD229482C5FBB¦APPLICATION»APPLICATION-036DD229482C5FBB»truebuiltin:apps.web.actionDuration.xhr.browser|AVG|TOTAL|BAR|APPLICATION": {
-              "lastModified": 1584714938864,
-              "customColor": "#2ab6f4"
-            },
-            "APPLICATION-036DD229482C5FBB¦APPLICATION»APPLICATION-036DD229482C5FBB»truebuiltin:apps.web.countOfErrorsDuringUserActions|NONE|TOTAL|LINE|APPLICATION": {
-              "lastModified": 1584714933553,
-              "customColor": "#fff29a"
-            },
-            "APPLICATION-036DD229482C5FBB¦APPLICATION»APPLICATION-036DD229482C5FBB»truebuiltin:apps.web.actionDuration.load.browser|AVG|TOTAL|BAR|APPLICATION": {
-              "lastModified": 1584714936442,
-              "customColor": "#008cdb"
-            }
+          "resultMetadata": {}
           }
         },
         "filtersPerEntityType": {}

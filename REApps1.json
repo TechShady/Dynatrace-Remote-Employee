@@ -269,7 +269,7 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "Active Sessions vs Load",
+        "customName": "Active Sessions",
         "defaultName": "Custom chart",
         "chartConfig": {
           "legendShown": true,
@@ -279,24 +279,6 @@
               "metric": "builtin:apps.web.activeSessions",
               "aggregation": "NONE",
               "percentile": null,
-              "type": "LINE",
-              "entityType": "APPLICATION",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "Application",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": false,
-              "aggregationRate": "TOTAL"
-            },
-            {
-              "metric": "builtin:apps.web.actionDuration.load.browser",
-              "aggregation": "AVG",
-              "percentile": null,
               "type": "BAR",
               "entityType": "APPLICATION",
               "dimensions": [
@@ -309,45 +291,10 @@
               ],
               "sortAscending": false,
               "sortColumn": false,
-              "aggregationRate": "TOTAL"
-            },
-            {
-              "metric": "builtin:apps.web.actionDuration.xhr.browser",
-              "aggregation": "AVG",
-              "percentile": null,
-              "type": "BAR",
-              "entityType": "APPLICATION",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "Application",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": true,
               "aggregationRate": "TOTAL"
             }
           ],
-          "resultMetadata": {
-            "APPLICATION-036DD229482C5FBB¦APPLICATION»APPLICATION-036DD229482C5FBB»truebuiltin:apps.web.actionDuration.xhr.browser|AVG|TOTAL|BAR|APPLICATION": {
-              "lastModified": 1584714393407,
-              "customColor": "#4fd5e0"
-            },
-            "APPLICATION-036DD229482C5FBB¦APPLICATION»APPLICATION-036DD229482C5FBB»truebuiltin:apps.web.activeSessions|NONE|TOTAL|LINE|APPLICATION": {
-              "lastModified": 1584714380080,
-              "customColor": "#fff29a"
-            },
-            "APPLICATION-036DD229482C5FBB¦APPLICATION»APPLICATION-036DD229482C5FBB»truebuiltin:apps.web.actionDuration.load.browser|AVG|TOTAL|LINE|APPLICATION": {
-              "lastModified": 1584714220034,
-              "customColor": "#fff29a"
-            },
-            "APPLICATION-036DD229482C5FBB¦APPLICATION»APPLICATION-036DD229482C5FBB»truebuiltin:apps.web.actionDuration.load.browser|AVG|TOTAL|BAR|APPLICATION": {
-              "lastModified": 1584714385313,
-              "customColor": "#008cdb"
-            }
-          }
+          "resultMetadata": {}
         },
         "filtersPerEntityType": {}
       }
@@ -366,7 +313,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## Active Sessions vs Load"
+      "markdown": "## Active Session Count"
     },
     {
       "name": "Markdown",
@@ -382,7 +329,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [User Action Count vs Load](#dashboard;id=a9704fb6-c0aa-44bb-b170-dd267a84da7c)\n"
+      "markdown": "## [User Action Count](#dashboard;id=a9704fb6-c0aa-44bb-b170-dd267a84da7c)\n"
     },
     {
       "name": "Markdown",
@@ -398,7 +345,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Error Count vs Load](#dashboard;id=d69c883b-0ffe-4961-bf0c-fa11e77bc9bd)\n"
+      "markdown": "## [Error Count](#dashboard;id=d69c883b-0ffe-4961-bf0c-fa11e77bc9bd)\n"
     },
     {
       "name": "Markdown",

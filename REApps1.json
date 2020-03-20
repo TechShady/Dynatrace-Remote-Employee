@@ -3,12 +3,12 @@
     "configurationVersions": [
       3
     ],
-    "clusterVersion": "1.191.0.20200316-194001"
+    "clusterVersion": "1.191.0.20200319-200008"
   },
   "id": "e75c3a2a-731d-49c0-8048-3206a4acca77",
   "dashboardMetadata": {
-    "name": "Remote Employee Applications Overview",
-    "shared": false,
+    "name": "Applications Overview",
+    "shared": true,
     "owner": "MyEmail",
     "sharingDetails": {
       "linkShared": true,
@@ -269,7 +269,7 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "Active Sessions",
+        "customName": "Active Sessions vs Load",
         "defaultName": "Custom chart",
         "chartConfig": {
           "legendShown": true,
@@ -290,11 +290,64 @@
                 }
               ],
               "sortAscending": false,
+              "sortColumn": false,
+              "aggregationRate": "TOTAL"
+            },
+            {
+              "metric": "builtin:apps.web.actionDuration.load.browser",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "BAR",
+              "entityType": "APPLICATION",
+              "dimensions": [
+                {
+                  "id": "0",
+                  "name": "Application",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": false,
+              "aggregationRate": "TOTAL"
+            },
+            {
+              "metric": "builtin:apps.web.actionDuration.xhr.browser",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "BAR",
+              "entityType": "APPLICATION",
+              "dimensions": [
+                {
+                  "id": "0",
+                  "name": "Application",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
               "sortColumn": true,
               "aggregationRate": "TOTAL"
             }
           ],
-          "resultMetadata": {}
+          "resultMetadata": {
+            "APPLICATION-036DD229482C5FBB¦APPLICATION»APPLICATION-036DD229482C5FBB»truebuiltin:apps.web.actionDuration.xhr.browser|AVG|TOTAL|BAR|APPLICATION": {
+              "lastModified": 1584714393407,
+              "customColor": "#4fd5e0"
+            },
+            "APPLICATION-036DD229482C5FBB¦APPLICATION»APPLICATION-036DD229482C5FBB»truebuiltin:apps.web.activeSessions|NONE|TOTAL|LINE|APPLICATION": {
+              "lastModified": 1584714380080,
+              "customColor": "#fff29a"
+            },
+            "APPLICATION-036DD229482C5FBB¦APPLICATION»APPLICATION-036DD229482C5FBB»truebuiltin:apps.web.actionDuration.load.browser|AVG|TOTAL|LINE|APPLICATION": {
+              "lastModified": 1584714220034,
+              "customColor": "#fff29a"
+            },
+            "APPLICATION-036DD229482C5FBB¦APPLICATION»APPLICATION-036DD229482C5FBB»truebuiltin:apps.web.actionDuration.load.browser|AVG|TOTAL|BAR|APPLICATION": {
+              "lastModified": 1584714385313,
+              "customColor": "#008cdb"
+            }
+          }
         },
         "filtersPerEntityType": {}
       }
@@ -313,7 +366,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## Active Sessions"
+      "markdown": "## Active Sessions vs Load"
     },
     {
       "name": "Markdown",
@@ -329,7 +382,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [User Action Count](#dashboard;id=a9704fb6-c0aa-44bb-b170-dd267a84da7c)\n"
+      "markdown": "## [User Action Count vs Load](#dashboard;id=bbbbbbbb-0001-0000-0000-000000000009)\n"
     },
     {
       "name": "Markdown",
@@ -345,7 +398,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Error Count](#dashboard;id=d69c883b-0ffe-4961-bf0c-fa11e77bc9bd)\n"
+      "markdown": "## [Error Count vs Load](#dashboard;id=bbbbbbbb-0001-0000-0000-000000000010)\n"
     },
     {
       "name": "Markdown",
@@ -361,7 +414,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Load Action Duration](#dashboard;id=d589e400-e5e9-475a-92c0-9171b290f9d4)\n"
+      "markdown": "## [Load Action Duration](#dashboard;id=bbbbbbbb-0001-0000-0000-000000000011)\n"
     },
     {
       "name": "Markdown",
@@ -377,7 +430,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [XHR Action Duration](#dashboard;id=5703b7aa-0453-46a7-bc23-14f1b18)\n"
+      "markdown": "## [XHR Action Duration](#dashboard;id=bbbbbbbb-0001-0000-0000-000000000012)\n"
     },
     {
       "name": "Markdown",
@@ -394,6 +447,6 @@
         "managementZone": null
       },
       "markdown": "![BackButton]()"
-	  }
+    }
   ]
 }

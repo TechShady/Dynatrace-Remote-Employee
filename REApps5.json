@@ -3,12 +3,12 @@
     "configurationVersions": [
       3
     ],
-    "clusterVersion": "1.191.0.20200316-194001"
+    "clusterVersion": "1.191.0.20200319-200008"
   },
   "id": "5703b7aa-0453-46a7-bc23-14f1b18",
   "dashboardMetadata": {
-    "name": "Remote Employee Applications Overview",
-    "shared": false,
+    "name": "Applications Overview",
+    "shared": true,
     "owner": "MyEmail",
     "sharingDetails": {
       "linkShared": true,
@@ -267,7 +267,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Active Sessions](#dashboard;id=e75c3a2a-731d-49c0-8048-3206a4acca77)"
+      "markdown": "## [Active Sessions vs Load](#dashboard;id=bbbbbbbb-0001-0000-0000-000000000008)"
     },
     {
       "name": "Markdown",
@@ -283,7 +283,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [User Action Count](#dashboard;id=a9704fb6-c0aa-44bb-b170-dd267a84da7c)"
+      "markdown": "## [User Action Count vs Load](#dashboard;id=bbbbbbbb-0001-0000-0000-000000000009)"
     },
     {
       "name": "Markdown",
@@ -299,7 +299,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Error Count](#dashboard;id=d69c883b-0ffe-4961-bf0c-fa11e77bc9bd)"
+      "markdown": "## [Error Count vs Load](#dashboard;id=bbbbbbbb-0001-0000-0000-000000000010)"
     },
     {
       "name": "Markdown",
@@ -315,7 +315,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Load Action Duration](#dashboard;id=d589e400-e5e9-475a-92c0-9171b290f9d4)"
+      "markdown": "## [Load Action Duration](#dashboard;id=bbbbbbbb-0001-0000-0000-000000000011)"
     },
     {
       "name": "Markdown",
@@ -359,7 +359,7 @@
               "metric": "builtin:apps.web.actionDuration.xhr.browser",
               "aggregation": "AVG",
               "percentile": null,
-              "type": "LINE",
+              "type": "AREA",
               "entityType": "APPLICATION",
               "dimensions": [
                 {
@@ -374,7 +374,12 @@
               "aggregationRate": "TOTAL"
             }
           ],
-          "resultMetadata": {}
+          "resultMetadata": {
+            "APPLICATION-036DD229482C5FBB¦APPLICATION»APPLICATION-036DD229482C5FBB»truebuiltin:apps.web.actionDuration.xhr.browser|AVG|TOTAL|AREA|APPLICATION": {
+              "lastModified": 1584715062330,
+              "customColor": "#2ab6f4"
+            }
+          }
         },
         "filtersPerEntityType": {}
       }
@@ -394,6 +399,6 @@
         "managementZone": null
       },
       "markdown": "![BackButton]()"
-	  }
+    }
   ]
 }

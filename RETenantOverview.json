@@ -221,7 +221,7 @@
       "configured": true,
       "bounds": {
         "top": 798,
-        "left": 0,
+        "left": 1102,
         "width": 570,
         "height": 304
       },
@@ -229,13 +229,13 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "User sessions query results",
-      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", avg(useraction.duration) as \"Duration\" from usersession",
+      "customName": "Errors",
+      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", sum(totalErrorCount) as \"Errors\" from usersession",
       "type": "LINE_CHART",
-      "timeFrameShift": "dynamic",
       "visualizationConfig": {
         "hasAxisBucketing": true
-      }
+      },
+      "limit": 50
     },
     {
       "name": "User Sessions Query",
@@ -251,13 +251,13 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "User sessions query results",
+      "customName": "Duration",
       "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", avg(useraction.duration) as \"Duration\" from usersession",
       "type": "LINE_CHART",
-      "timeFrameShift": "dynamic",
       "visualizationConfig": {
         "hasAxisBucketing": true
-      }
+      },
+      "limit": 50
     },
     {
       "name": "User Sessions Query",
@@ -265,7 +265,7 @@
       "configured": true,
       "bounds": {
         "top": 798,
-        "left": 1102,
+        "left": 0,
         "width": 570,
         "height": 304
       },
@@ -273,13 +273,13 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "User sessions query results",
-      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", avg(useraction.duration) as \"Duration\" from usersession",
+      "customName": "Requests",
+      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", count(userSessionId) as \"Requests\" from usersession",
       "type": "LINE_CHART",
-      "timeFrameShift": "dynamic",
       "visualizationConfig": {
         "hasAxisBucketing": true
-      }
+      },
+      "limit": 50
     },
     {
       "name": "User Sessions Query",

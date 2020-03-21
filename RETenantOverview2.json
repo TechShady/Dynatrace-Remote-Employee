@@ -24,6 +24,162 @@
   },
   "tiles": [
     {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 0,
+        "width": 342,
+        "height": 304
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Action Duration",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "legendShown": true,
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:apps.other.uaDuration.osAndVersion",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "MONITORED_ENTITY˟DEVICE_APPLICATION",
+              "dimensions": [
+                {
+                  "id": "0",
+                  "name": "Application",
+                  "values": [],
+                  "entityDimension": true
+                },
+                {
+                  "id": "1",
+                  "name": "Operating system",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 722,
+        "width": 342,
+        "height": 304
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Crash Count",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "legendShown": true,
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:apps.other.crashCount.osAndVersion",
+              "aggregation": "NONE",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "MONITORED_ENTITY˟DEVICE_APPLICATION",
+              "dimensions": [
+                {
+                  "id": "0",
+                  "name": "Application",
+                  "values": [],
+                  "entityDimension": true
+                },
+                {
+                  "id": "1",
+                  "name": "Operating system",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 342,
+        "width": 380,
+        "height": 304
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Action Count",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "legendShown": true,
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:apps.other.uaCount.osAndVersion",
+              "aggregation": "NONE",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "MONITORED_ENTITY˟DEVICE_APPLICATION",
+              "dimensions": [
+                {
+                  "id": "0",
+                  "name": "Application",
+                  "values": [],
+                  "entityDimension": true
+                },
+                {
+                  "id": "1",
+                  "name": "Operating system",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
       "name": "User Sessions Query",
       "tileType": "DTAQL",
       "configured": true,
@@ -138,21 +294,6 @@
       "timeFrameShift": "dynamic"
     },
     {
-      "name": "Live user activity",
-      "tileType": "UEM_ACTIVE_SESSIONS",
-      "configured": true,
-      "bounds": {
-        "top": 0,
-        "left": 0,
-        "width": 304,
-        "height": 304
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      }
-    },
-    {
       "name": "Application health",
       "tileType": "APPLICATIONS",
       "configured": true,
@@ -168,136 +309,6 @@
       },
       "filterConfig": null,
       "chartVisible": true
-    },
-    {
-      "name": "Custom chart",
-      "tileType": "CUSTOM_CHARTING",
-      "configured": true,
-      "bounds": {
-        "top": 0,
-        "left": 304,
-        "width": 304,
-        "height": 304
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "Action Duration",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TOP_LIST",
-          "series": [
-            {
-              "metric": "builtin:apps.other.uaDuration.osAndVersion",
-              "aggregation": "AVG",
-              "percentile": null,
-              "type": "LINE",
-              "entityType": "MONITORED_ENTITY˟DEVICE_APPLICATION",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "Application",
-                  "values": [],
-                  "entityDimension": true
-                },
-                {
-                  "id": "1",
-                  "name": "Operating system",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
-          ],
-          "resultMetadata": {}
-        },
-        "filtersPerEntityType": {}
-      }
-    },
-    {
-      "name": "",
-      "tileType": "CUSTOM_CHARTING",
-      "configured": true,
-      "bounds": {
-        "top": 0,
-        "left": 836,
-        "width": 228,
-        "height": 304
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "Active sessions",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TOP_LIST",
-          "series": [
-            {
-              "metric": "builtin:apps.web.activeSessions",
-              "aggregation": "NONE",
-              "percentile": null,
-              "type": "LINE",
-              "entityType": "APPLICATION",
-              "dimensions": [],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
-          ],
-          "resultMetadata": {}
-        },
-        "filtersPerEntityType": {}
-      }
-    },
-    {
-      "name": "",
-      "tileType": "CUSTOM_CHARTING",
-      "configured": true,
-      "bounds": {
-        "top": 0,
-        "left": 608,
-        "width": 228,
-        "height": 304
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "Session duration",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TOP_LIST",
-          "series": [
-            {
-              "metric": "builtin:apps.web.sessionDuration",
-              "aggregation": "AVG",
-              "percentile": null,
-              "type": "LINE",
-              "entityType": "APPLICATION",
-              "dimensions": [],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
-          ],
-          "resultMetadata": {}
-        },
-        "filtersPerEntityType": {}
-      }
     },
     {
       "name": "Application Links ▼",

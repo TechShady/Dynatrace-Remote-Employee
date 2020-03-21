@@ -170,8 +170,8 @@
       "chartVisible": true
     },
     {
-      "name": "Top web applications",
-      "tileType": "APPLICATIONS_MOST_ACTIVE",
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
         "top": 0,
@@ -182,6 +182,43 @@
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Action Duration",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "legendShown": true,
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:apps.other.uaDuration.osAndVersion",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "MONITORED_ENTITY˟DEVICE_APPLICATION",
+              "dimensions": [
+                {
+                  "id": "0",
+                  "name": "Application",
+                  "values": [],
+                  "entityDimension": true
+                },
+                {
+                  "id": "1",
+                  "name": "Operating system",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
       }
     },
     {

@@ -7,7 +7,7 @@
   },
   "id": "fbe8d3b1-ccb9-480c-9e5d-0e1b8b4da734",
   "dashboardMetadata": {
-    "name": "\ud83d\ude80 Remote Employee Web Tenant Portal",
+    "name": "\ud83d\ude80 Remote Employee Mobile Tenant Portal",
     "shared": true,
     "owner": "MyEmail",
     "sharingDetails": {
@@ -458,7 +458,7 @@
       "limit": 50
     },
     {
-      "name": "Graphs and Portal Links ▼",
+      "name": "Graphs and Portal Links \u25BC",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
@@ -473,7 +473,7 @@
       }
     },
     {
-      "name": "Application Links ▼",
+      "name": "Application Links \u25BC",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
@@ -488,7 +488,7 @@
       }
     },
     {
-      "name": "Infrastructure Links ▼",
+      "name": "Infrastructure Links \u25BC",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
@@ -503,7 +503,7 @@
       }
     },
     {
-      "name": "Service Links ▼",
+      "name": "Service Links \u25BC",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
@@ -518,7 +518,7 @@
       }
     },
     {
-      "name": "Availability Links ▼",
+      "name": "Availability Links \u25BC",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
@@ -533,7 +533,7 @@
       }
     },
     {
-      "name": "Overview Links ▼",
+      "name": "Overview Links \u25BC",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {

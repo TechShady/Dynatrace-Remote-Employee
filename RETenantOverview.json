@@ -434,7 +434,7 @@
       "limit": 50
     },
     {
-      "name": "Graphs and Portal Links ▼",
+      "name": "Graphs and Portal Links \u25BC",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
@@ -449,7 +449,7 @@
       }
     },
     {
-      "name": "Application Links ▼",
+      "name": "Application Links \u25BC",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
@@ -464,7 +464,7 @@
       }
     },
     {
-      "name": "Infrastructure Links ▼",
+      "name": "Infrastructure Links \u25BC",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
@@ -479,7 +479,7 @@
       }
     },
     {
-      "name": "Service Links ▼",
+      "name": "Service Links \u25BC",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
@@ -494,7 +494,7 @@
       }
     },
     {
-      "name": "Availability Links ▼",
+      "name": "Availability Links \u25BC",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
@@ -509,7 +509,7 @@
       }
     },
     {
-      "name": "Overview Links ▼",
+      "name": "Overview Links \u25BC",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {

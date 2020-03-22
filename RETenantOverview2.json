@@ -396,7 +396,7 @@
         "managementZone": null
       },
       "customName": "Crashes by IP",
-      "query": "Select ip, count(useraction.hasCrash) FROM usersession where useraction.hasCrash=true group by IP order by count(useraction.hasCrash) DESC LIMIT 10",
+      "query": "Select ip, count(useraction.hasCrash) FROM usersession group by IP order by count(useraction.hasCrash) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -415,7 +415,7 @@
         "managementZone": null
       },
       "customName": "Crashes by ISP",
-      "query": "Select isp, count(useraction.hasCrash) FROM usersession where useraction.hasCrash=true group by IsP order by count(useraction.hasCrash) DESC LIMIT 10",
+      "query": "Select isp, count(useraction.hasCrash) FROM usersession group by IsP order by count(useraction.hasCrash) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -434,7 +434,7 @@
         "managementZone": null
       },
       "customName": "Crashes by Browser",
-      "query": "Select browserFamily, count(useraction.hasCrash) FROM usersession where useraction.hasCrash=true group by browserFamily order by count(useraction.hasCrash) DESC LIMIT 10",
+      "query": "Select browserFamily, count(useraction.hasCrash) FROM usersession group by browserFamily order by count(useraction.hasCrash) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -453,7 +453,7 @@
         "managementZone": null
       },
       "customName": "Crashes by City",
-      "query": "Select city, count(useraction.hasCrash) FROM usersession where useraction.hasCrash=true group by city order by count(useraction.hasCrash) DESC LIMIT 10",
+      "query": "Select city, count(useraction.hasCrash) FROM usersession group by city order by count(useraction.hasCrash) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },

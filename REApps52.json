@@ -387,10 +387,10 @@
           "series": [
             {
               "metric": "builtin:apps.other.requestErrorCount.osAndVersion",
-              "aggregation": "AVG",
+              "aggregation": "NONE",
               "percentile": null,
               "type": "BAR",
-              "entityType": "APPLICATION",
+              "entityType": "MONITORED_ENTITY˟DEVICE_APPLICATION",
               "dimensions": [
                 {
                   "id": "0",

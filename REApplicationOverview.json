@@ -104,7 +104,7 @@
         "managementZone": null
       },
       "customName": "Duration by IP",
-      "query": "Select ip, avg(useraction.duration) FROM usersession where ipClause group by IP order by avg(useraction.duration) DESC LIMIT 10",
+      "query": "Select ip, avg(useraction.duration) FROM usersession where useraction.application=\"MyApp\" ipClause group by IP order by avg(useraction.duration) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },

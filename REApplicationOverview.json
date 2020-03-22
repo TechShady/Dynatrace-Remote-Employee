@@ -1,0 +1,307 @@
+{
+  "metadata": {
+    "configurationVersions": [
+      3
+    ],
+    "clusterVersion": "1.191.0.20200318-160539"
+  },
+  "id": "fbe8d3b1-ccb9-480c-9e5d-0e1b8b4da777",
+  "dashboardMetadata": {
+    "name": "\ud83d\ude80 Remote Employee Web Application Portal",
+    "shared": true,
+    "owner": "MyEmail",
+    "sharingDetails": {
+      "linkShared": true,
+      "published": true
+    },
+    "dashboardFilter": {
+      "timeframe": "l_2_HOURS",
+      "managementZone": null
+    },
+    "tags": [
+      "Portal"
+    ]
+  },
+  "tiles": [
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 798,
+        "left": 1102,
+        "width": 570,
+        "height": 304
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Errors",
+      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", sum(totalErrorCount) as \"Errors\" from usersession",
+      "type": "LINE_CHART",
+      "visualizationConfig": {
+        "hasAxisBucketing": true
+      },
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 798,
+        "left": 570,
+        "width": 532,
+        "height": 304
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Duration",
+      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", avg(useraction.duration) as \"Duration\" from usersession",
+      "type": "LINE_CHART",
+      "visualizationConfig": {
+        "hasAxisBucketing": true
+      },
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 798,
+        "left": 0,
+        "width": 570,
+        "height": 304
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Requests",
+      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", count(userSessionId) as \"Requests\" from usersession",
+      "type": "LINE_CHART",
+      "visualizationConfig": {
+        "hasAxisBucketing": true
+      },
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 228,
+        "left": 0,
+        "width": 418,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Duration by IP",
+      "query": "Select ip, avg(useraction.duration) FROM usersession group by IP order by avg(useraction.duration) DESC LIMIT 10",
+      "type": "PIE_CHART",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 228,
+        "left": 418,
+        "width": 418,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Duration by ISP",
+      "query": "Select isp, avg(useraction.duration) FROM usersession group by IsP order by avg(useraction.duration) DESC LIMIT 10",
+      "type": "PIE_CHART",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 418,
+        "width": 418,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Duration by City",
+      "query": "Select city, avg(useraction.duration) FROM usersession group by city order by avg(useraction.duration) DESC LIMIT 10",
+      "type": "PIE_CHART",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 0,
+        "width": 418,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Duration by Browser",
+      "query": "Select browserfamily, avg(useraction.duration) FROM usersession group by browserfamily order by avg(useraction.duration) DESC LIMIT 10",
+      "type": "PIE_CHART",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 228,
+        "left": 836,
+        "width": 418,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Errors by IP",
+      "query": "Select ip, sum(useraction.errorCount) FROM usersession where useraction.errorCount>0 group by IP order by sum(useraction.errorCount) DESC LIMIT 10",
+      "type": "PIE_CHART",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 228,
+        "left": 1254,
+        "width": 418,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Errors by ISP",
+      "query": "Select isp, sum(useraction.errorCount) FROM usersession where useraction.errorCount>0 group by IsP order by sum(useraction.errorCount) DESC LIMIT 10",
+      "type": "PIE_CHART",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 836,
+        "width": 418,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Errors by Browser",
+      "query": "Select browserFamily, sum(useraction.errorCount) FROM usersession where useraction.errorCount>0 group by browserFamily order by sum(useraction.errorCount) DESC LIMIT 10",
+      "type": "PIE_CHART",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 1254,
+        "width": 418,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Errors by City",
+      "query": "Select city, sum(useraction.errorCount) FROM usersession where useraction.errorCount>0 group by city order by sum(useraction.errorCount) DESC LIMIT 10",
+      "type": "PIE_CHART",
+      "limit": 50
+    },
+    {
+      "name": "Graphs and Portal Links \u25BC",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 760,
+        "left": 0,
+        "width": 418,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Overview Links \u25BC",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 1102,
+        "left": 342,
+        "width": 342,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 1140,
+        "left": 342,
+        "width": 342,
+        "height": 494
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "![Application Links2]()"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 1634,
+        "width": 152,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "![BackButton]()"
+    }
+  ]
+}

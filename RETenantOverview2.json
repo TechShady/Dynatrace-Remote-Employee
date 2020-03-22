@@ -338,8 +338,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Duration by ISP",
-      "query": "Select isp, avg(useraction.duration) FROM usersession group by IsP order by avg(useraction.duration) DESC LIMIT 10",
+      "customName": "Duration by Carrier",
+      "query": "Select carrier, avg(useraction.duration) FROM usersession where Carrier<>\"-\" group by Carrier order by avg(useraction.duration) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -357,8 +357,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Duration by City",
-      "query": "Select city, avg(useraction.duration) FROM usersession group by city order by avg(useraction.duration) DESC LIMIT 10",
+      "customName": "Duration by Network Technology",
+      "query": "Select networkTechnology, avg(useraction.duration) FROM usersession where networkTechnology<>\"-\" group by networkTechnology order by avg(useraction.duration) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -376,8 +376,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Duration by Browser",
-      "query": "Select browserfamily, avg(useraction.duration) FROM usersession group by browserfamily order by avg(useraction.duration) DESC LIMIT 10",
+      "customName": "Duration by OS Version",
+      "query": "Select osversion, avg(useraction.duration) FROM usersession group by osversion order by avg(useraction.duration) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -414,8 +414,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Crashes by ISP",
-      "query": "Select isp, count(useraction.hasCrash) FROM usersession group by IsP order by count(useraction.hasCrash) DESC LIMIT 10",
+      "customName": "Crashes by OS Version",
+      "query": "Select OSVERSION, count(useraction.hasCrash) FROM usersession group by OSVERSION order by count(useraction.hasCrash) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -433,8 +433,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Crashes by Browser",
-      "query": "Select browserFamily, count(useraction.hasCrash) FROM usersession group by browserFamily order by count(useraction.hasCrash) DESC LIMIT 10",
+      "customName": "Crashes by Carrier",
+      "query": "Select Carrier, count(useraction.hasCrash) FROM usersession where Carrier<>\"-\" group by Carrier order by count(useraction.hasCrash) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -452,8 +452,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Crashes by City",
-      "query": "Select city, count(useraction.hasCrash) FROM usersession group by city order by count(useraction.hasCrash) DESC LIMIT 10",
+      "customName": "Crashes by Network Technology",
+      "query": "Select networkTechnology, count(useraction.hasCrash) FROM usersession where networkTechnology<>\"-\" group by networkTechnology order by count(useraction.hasCrash) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },

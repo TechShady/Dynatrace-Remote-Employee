@@ -379,7 +379,7 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "Error Count
+        "customName": "Error Count",
         "defaultName": "Custom chart",
         "chartConfig": {
           "legendShown": true,

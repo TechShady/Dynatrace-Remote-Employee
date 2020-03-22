@@ -85,7 +85,7 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "Crash Count",
+        "customName": "Error Count",
         "defaultName": "Custom chart",
         "chartConfig": {
           "legendShown": true,

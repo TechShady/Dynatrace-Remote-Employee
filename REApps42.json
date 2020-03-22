@@ -390,7 +390,7 @@
               "aggregation": "AVG",
               "percentile": null,
               "type": "BAR",
-              "entityType": "APPLICATION",
+              "entityType": "MONITORED_ENTITY˟DEVICE_APPLICATION",
               "dimensions": [
                 {
                   "id": "0",

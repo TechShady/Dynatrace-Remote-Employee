@@ -389,7 +389,7 @@
               "metric": "builtin:apps.other.sessionCount.osAndGeo",
               "aggregation": "NONE",
               "percentile": null,
-              "type": "LINE",
+              "type": "BAR",
               "entityType": "MONITORED_ENTITY˟DEVICE_APPLICATION",
               "dimensions": [
                 {

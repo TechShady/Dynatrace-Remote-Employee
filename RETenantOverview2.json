@@ -253,8 +253,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Errors",
-      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", sum(totalErrorCount) as \"Errors\" from usersession",
+      "customName": "Crashes",
+      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", count(useraction.hasCrash) as \"Crashes\" from usersession",
       "type": "LINE_CHART",
       "visualizationConfig": {
         "hasAxisBucketing": true
@@ -395,8 +395,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Errors by IP",
-      "query": "Select ip, sum(useraction.errorCount) FROM usersession where useraction.errorCount>0 group by IP order by sum(useraction.errorCount) DESC LIMIT 10",
+      "customName": "Crashes by IP",
+      "query": "Select ip, count(useraction.hasCrash) FROM usersession where useraction.hasCrash=true group by IP order by count(useraction.hasCrash) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -414,8 +414,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Errors by ISP",
-      "query": "Select isp, sum(useraction.errorCount) FROM usersession where useraction.errorCount>0 group by IsP order by sum(useraction.errorCount) DESC LIMIT 10",
+      "customName": "Crashes by ISP",
+      "query": "Select isp, count(useraction.hasCrash) FROM usersession where useraction.hasCrash=true group by IsP order by count(useraction.hasCrash) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -433,8 +433,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Errors by Browser",
-      "query": "Select browserFamily, sum(useraction.errorCount) FROM usersession where useraction.errorCount>0 group by browserFamily order by sum(useraction.errorCount) DESC LIMIT 10",
+      "customName": "Crashes by Browser",
+      "query": "Select browserFamily, count(useraction.hasCrash) FROM usersession where useraction.hasCrash=true group by browserFamily order by count(useraction.hasCrash) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -452,8 +452,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Errors by City",
-      "query": "Select city, sum(useraction.errorCount) FROM usersession where useraction.errorCount>0 group by city order by sum(useraction.errorCount) DESC LIMIT 10",
+      "customName": "Crashes by City",
+      "query": "Select city, count(useraction.hasCrash) FROM usersession where useraction.hasCrash=true group by city order by count(useraction.hasCrash) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },

@@ -329,8 +329,8 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 228,
-        "left": 418,
+        "top": 494,
+        "left": 0,
         "width": 418,
         "height": 266
       },
@@ -367,8 +367,8 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 494,
-        "left": 0,
+        "top": 228,
+        "left": 418,
         "width": 418,
         "height": 266
       },

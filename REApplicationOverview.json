@@ -98,7 +98,7 @@
         "managementZone": null
       },
       "customName": " Duration 90th Percentile",
-      "query": "select PERCENTILE(duration,90) as \"Duration\" from useraction where useraction.application=\"MyApp\" ipClause",
+      "query": "select PERCENTILE(useraction.duration,90) as \"Duration\" from usersession where useraction.application=\"MyApp\" ipClause",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic",
       "limit": 50

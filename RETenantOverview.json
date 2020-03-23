@@ -216,8 +216,8 @@
       }
     },
     {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
+      "name": "",
+      "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
         "top": 798,
@@ -229,17 +229,41 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Errors",
-      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", sum(totalErrorCount) as \"Errors\" from usersession",
-      "type": "LINE_CHART",
-      "visualizationConfig": {
-        "hasAxisBucketing": true
-      },
-      "limit": 50
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Errors",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "legendShown": true,
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:apps.web.countOfUserActionsWithErrors",
+              "aggregation": "NONE",
+              "percentile": null,
+              "type": "AREA",
+              "entityType": "APPLICATION",
+              "dimensions": [
+                {
+                  "id": "0",
+                  "name": "Application",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
     },
     {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
+      "name": "",
+      "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
         "top": 798,
@@ -251,13 +275,37 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Duration",
-      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", avg(useraction.duration) as \"Duration\" from usersession",
-      "type": "LINE_CHART",
-      "visualizationConfig": {
-        "hasAxisBucketing": true
-      },
-      "limit": 50
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Duration",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "legendShown": true,
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:apps.web.actionDuration.load.browser",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "AREA",
+              "entityType": "APPLICATION",
+              "dimensions": [
+                {
+                  "id": "0",
+                  "name": "Application",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
     },
      {
       "name": "Custom chart",
@@ -285,7 +333,7 @@
               "metric": "builtin:apps.web.actionCount.load.browser",
               "aggregation": "NONE",
               "percentile": null,
-              "type": "LINE",
+              "type": "AREA",
               "entityType": "APPLICATION",
               "dimensions": [
                 {

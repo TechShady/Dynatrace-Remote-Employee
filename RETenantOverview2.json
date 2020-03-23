@@ -24,7 +24,7 @@
   },
   "tiles": [
     {
-      "name": "Custom chart",
+      "name": "",
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
@@ -39,7 +39,59 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "Action Duration",
+        "customName": "Requests",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "legendShown": true,
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:apps.other.uaCount.osAndVersion",
+              "aggregation": "NONE",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "MONITORED_ENTITY˟DEVICE_APPLICATION",
+              "dimensions": [
+                {
+                  "id": "0",
+                  "name": "Application",
+                  "values": [],
+                  "entityDimension": true
+                },
+                {
+                  "id": "1",
+                  "name": "Operating system",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 418,
+        "width": 418,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Duration",
         "defaultName": "Custom chart",
         "chartConfig": {
           "legendShown": true,
@@ -91,7 +143,7 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "Crash Count",
+        "customName": "Crashes",
         "defaultName": "Custom chart",
         "chartConfig": {
           "legendShown": true,
@@ -99,58 +151,6 @@
           "series": [
             {
               "metric": "builtin:apps.other.crashCount.osAndVersion",
-              "aggregation": "NONE",
-              "percentile": null,
-              "type": "LINE",
-              "entityType": "MONITORED_ENTITY˟DEVICE_APPLICATION",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "Application",
-                  "values": [],
-                  "entityDimension": true
-                },
-                {
-                  "id": "1",
-                  "name": "Operating system",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
-          ],
-          "resultMetadata": {}
-        },
-        "filtersPerEntityType": {}
-      }
-    },
-    {
-      "name": "",
-      "tileType": "CUSTOM_CHARTING",
-      "configured": true,
-      "bounds": {
-        "top": 0,
-        "left": 418,
-        "width": 418,
-        "height": 228
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "Action Count",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TOP_LIST",
-          "series": [
-            {
-              "metric": "builtin:apps.other.uaCount.osAndVersion",
               "aggregation": "NONE",
               "percentile": null,
               "type": "LINE",
@@ -240,52 +240,8 @@
       }
     },
     {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 798,
-        "left": 1102,
-        "width": 570,
-        "height": 304
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": "Crashes",
-      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", count(useraction.hasCrash) as \"Crashes\" from usersession",
-      "type": "LINE_CHART",
-      "visualizationConfig": {
-        "hasAxisBucketing": true
-      },
-      "limit": 50
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 798,
-        "left": 570,
-        "width": 532,
-        "height": 304
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": "Duration",
-      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", avg(useraction.duration) as \"Duration\" from usersession",
-      "type": "LINE_CHART",
-      "visualizationConfig": {
-        "hasAxisBucketing": true
-      },
-      "limit": 50
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
+      "name": "",
+      "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
         "top": 798,
@@ -297,13 +253,147 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Requests",
-      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", count(userSessionId) as \"Requests\" from usersession",
-      "type": "LINE_CHART",
-      "visualizationConfig": {
-        "hasAxisBucketing": true
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Requests",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "legendShown": true,
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:apps.other.uaCount.osAndVersion",
+              "aggregation": "NONE",
+              "percentile": null,
+              "type": "AREA",
+              "entityType": "MONITORED_ENTITY˟DEVICE_APPLICATION",
+              "dimensions": [
+                {
+                  "id": "0",
+                  "name": "Application",
+                  "values": [],
+                  "entityDimension": true
+                },
+                {
+                  "id": "1",
+                  "name": "Operating system",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 798,
+        "left": 570,
+        "width": 532,
+        "height": 304
       },
-      "limit": 50
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Duration",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "legendShown": true,
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:apps.other.uaDuration.osAndVersion",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "AREA",
+              "entityType": "MONITORED_ENTITY˟DEVICE_APPLICATION",
+              "dimensions": [
+                {
+                  "id": "0",
+                  "name": "Application",
+                  "values": [],
+                  "entityDimension": true
+                },
+                {
+                  "id": "1",
+                  "name": "Operating system",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 798,
+        "left": 1102,
+        "width": 570,
+        "height": 304
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Crashes",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "legendShown": true,
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:apps.other.crashCount.osAndVersion",
+              "aggregation": "NONE",
+              "percentile": null,
+              "type": "AREA",
+              "entityType": "MONITORED_ENTITY˟DEVICE_APPLICATION",
+              "dimensions": [
+                {
+                  "id": "0",
+                  "name": "Application",
+                  "values": [],
+                  "entityDimension": true
+                },
+                {
+                  "id": "1",
+                  "name": "Operating system",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
     },
     {
       "name": "User Sessions Query",

@@ -362,7 +362,7 @@
       "configured": true,
       "bounds": {
         "top": 1102,
-        "left": 342,
+        "left": 0,
         "width": 342,
         "height": 38
       },
@@ -377,7 +377,7 @@
       "configured": true,
       "bounds": {
         "top": 1140,
-        "left": 342,
+        "left": 0,
         "width": 342,
         "height": 494
       },

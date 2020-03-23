@@ -5,7 +5,7 @@
     ],
     "clusterVersion": "1.191.0.20200319-200008"
   },
-  "id": "495ab386-5f11-408f-b3d6-7392955e87c1",
+  "id": "495ab386-5f11-408f-b3d6-7392955e87c5",
   "dashboardMetadata": {
     "name": "MyApp Overview",
     "shared": true,
@@ -313,7 +313,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## Active Sessions"
+      "markdown": "## [Active Sessions](#dashboard;id=495ab386-5f11-408f-b3d6-7392955e87c1)\n"
     },
     {
       "name": "Markdown",
@@ -377,7 +377,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [XHR Action Duration](#dashboard;id=495ab386-5f11-408f-b3d6-7392955e87c5)\n"
+      "markdown": "## XHR Action Duration"
     },
     {
       "name": "Markdown",

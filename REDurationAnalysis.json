@@ -1,0 +1,261 @@
+{
+  "metadata": {
+    "configurationVersions": [
+      3
+    ],
+    "clusterVersion": "1.191.0.20200320-205857"
+  },
+  "id": "d9d64605-862d-4640-ac55-236a56ac3cf7",
+  "dashboardMetadata": {
+    "name": "Duration Analysis",
+    "shared": true,
+    "owner": "MyEmail",
+    "sharingDetails": {
+      "linkShared": true,
+      "published": false
+    },
+    "dashboardFilter": {
+      "timeframe": "l_2_HOURS",
+      "managementZone": null
+    },
+    "tags": [
+      "Analysis",
+      "MyApp"
+    ]
+  },
+  "tiles": [
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 1634,
+        "width": 38,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "![BackButton]()"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 418,
+        "width": 380,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Fast Duration (<1m)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20IP%20as%20%22IP%22%2C%20duration%20as%20%22Duration%22%20FROM%20usersession%20where%20useraction.application%3D%22MyURLApp%22%20and%20duration<%3D60000%20ORDER%20BY%20Duration%20DESC&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 874,
+        "width": 380,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Medium Duration (1-3m)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20IP%20as%20%22IP%22%2C%20duration%20as%20%22Duration%22%20%20FROM%20usersession%20where%20useraction.application%3D%22MyURLApp%22%20and%20duration%3E60000%20%20AND%20duration%3C%3D180000%20order%20by%20duration%20desc&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 1292,
+        "width": 266,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Slow Duration (>3m)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20IP%20as%20%22IP%22%2C%20duration%20as%20%22Duration%22%20%20FROM%20usersession%20where%20useraction.application%3D%22MyURLApp%22%20and%20duration%3E180000%20order%20by%20duration%20desc&visualization=TABLE)"
+    },
+    {
+      "name": "User Action Duration Over Time",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 266,
+        "left": 0,
+        "width": 380,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 304,
+        "left": 874,
+        "width": 798,
+        "height": 532
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "⏱",
+      "query": "select distinct name, avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyApp\"  order by Duration DESC",
+      "type": "COLUMN_CHART",
+      "visualizationConfig": {
+        "hasAxisBucketing": true
+      }
+    },
+    {
+      "name": "Top Slow Actions",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 266,
+        "left": 874,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 0,
+        "width": 380,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Very Fast Duration (<1m)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20IP%20as%20%22IP%22%2C%20duration%20as%20%22Duration%22%20FROM%20usersession%20where%20useraction.application%3D%22MyURLApp%22%20and%20duration<%3D30000%20ORDER%20BY%20Duration%20DESC&visualization=TABLE)"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 418,
+        "width": 380,
+        "height": 190
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "🐎",
+      "query": "select count(distinct userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\"  and\n\tduration<=60000 ",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 0,
+        "width": 380,
+        "height": 190
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "🏎",
+      "query": "select count(distinct userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\"  and\n\tduration<=30000 ",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 874,
+        "width": 380,
+        "height": 190
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "🐇",
+      "query": "select count(distinct userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\"  and\n\tduration>60000 AND duration<=180000 ",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 1292,
+        "width": 380,
+        "height": 190
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "🐢",
+      "query": "select count(distinct userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\"  and\n\tduration>180000 ",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 304,
+        "left": 0,
+        "width": 798,
+        "height": 532
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "⏱",
+      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", avg(useraction.duration) as \"Duration\" FROM usersession where useraction.application=\"MyApp\"  ",
+      "type": "COLUMN_CHART",
+      "visualizationConfig": {
+        "hasAxisBucketing": true
+      },
+      "limit": 50
+    }
+  ]
+}

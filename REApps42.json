@@ -39,7 +39,7 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "Sessions Count",
+        "customName": "Sessions",
         "defaultName": "Custom chart",
         "chartConfig": {
           "legendShown": true,
@@ -91,7 +91,7 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "Action Count",
+        "customName": "Requests",
         "defaultName": "Custom chart",
         "chartConfig": {
           "legendShown": true,
@@ -143,7 +143,7 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "Crash Count",
+        "customName": "Crashes",
         "defaultName": "Custom chart",
         "chartConfig": {
           "legendShown": true,
@@ -247,7 +247,7 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "Error Count",
+        "customName": "Errors",
         "defaultName": "Custom chart",
         "chartConfig": {
           "legendShown": true,
@@ -297,7 +297,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Sessions Count](#dashboard;id=e75c3a2a-731d-49c0-8048-3206a4acca78)\n"
+      "markdown": "## [Sessions](#dashboard;id=e75c3a2a-731d-49c0-8048-3206a4acca78)\n"
     },
     {
       "name": "Markdown",
@@ -313,7 +313,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Action Count](#dashboard;id=a9704fb6-c0aa-44bb-b170-dd267a84da7d)\n"
+      "markdown": "## [Requests](#dashboard;id=a9704fb6-c0aa-44bb-b170-dd267a84da7d)\n"
     },
     {
       "name": "Markdown",
@@ -329,7 +329,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Crash Count](#dashboard;id=d69c883b-0ffe-4961-bf0c-fa11e77bc9be)\n"
+      "markdown": "## [Crashes](#dashboard;id=d69c883b-0ffe-4961-bf0c-fa11e77bc9be)\n"
     },
     {
       "name": "Markdown",
@@ -361,7 +361,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Error Count](#dashboard;id=5703b7aa-0453-46a7-bc23-14f1b18da735)\n"
+      "markdown": "## [Errors](#dashboard;id=5703b7aa-0453-46a7-bc23-14f1b18da735)\n"
     },
     {
       "name": "Custom chart",

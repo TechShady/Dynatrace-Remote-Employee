@@ -85,7 +85,7 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "User Action Count",
+        "customName": "Requests",
         "defaultName": "Custom chart",
         "chartConfig": {
           "legendShown": true,
@@ -131,7 +131,7 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "Error Count",
+        "customName": "Errors",
         "defaultName": "Custom chart",
         "chartConfig": {
           "legendShown": true,
@@ -283,7 +283,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## User Action Count"
+      "markdown": "## Requests"
     },
     {
       "name": "Markdown",
@@ -299,7 +299,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Error Count](#dashboard;id=d69c883b-0ffe-4961-bf0c-fa11e77bc9bd)\n"
+      "markdown": "## [Errors](#dashboard;id=d69c883b-0ffe-4961-bf0c-fa11e77bc9bd)\n"
     },
     {
       "name": "Markdown",
@@ -349,7 +349,7 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "User Action Count",
+        "customName": "Requests",
         "defaultName": "Custom chart",
         "chartConfig": {
           "legendShown": true,

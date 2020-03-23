@@ -28,6 +28,106 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
+        "top": 38,
+        "left": 0,
+        "width": 304,
+        "height": 190
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " Satisfied Users",
+      "query": "select count(usersessionid) as \"Users\" from usersession where useraction.application=\"Easy Travel\"  and userExperienceScore=\"SATISFIED\"",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 342,
+        "width": 304,
+        "height": 190
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " Tolerated Users",
+      "query": "select count(usersessionid) as \"Users\" from usersession where useraction.application=\"Easy Travel\"  and userExperienceScore=\"TOLERATED\"",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 684,
+        "width": 304,
+        "height": 190
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " Frustrated Users",
+      "query": "select count(usersessionid) as \"Users\" from usersession where useraction.application=\"Easy Travel\"  and userExperienceScore=\"FRUSTRATED\"",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 1026,
+        "width": 304,
+        "height": 190
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " Duration 90th Percentile",
+      "query": "select PERCENTILE(duration,90) as \"Duration\" from useraction where useraction.application=\"Easy Travel\"",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 1368,
+        "width": 304,
+        "height": 190
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " Errors",
+      "query": "select sum(totalErrorCount) as \"Errors\" from usersession where useraction.application=\"Easy Travel\" ",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
         "top": 798,
         "left": 1102,
         "width": 570,

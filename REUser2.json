@@ -228,7 +228,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Sessions",
+      "customName": "Requests",
       "query": "Select DISTINCT DATETIME(starttime, \"HH:mm\", \"2m\") as \"Time\", count(userActionCount) as \"Requests\" from usersession ",
       "type": "COLUMN_CHART",
       "visualizationConfig": {

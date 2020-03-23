@@ -228,7 +228,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Sessions",
+      "customName": "Session Duration",
       "query": "Select DISTINCT DATETIME(starttime, \"HH:mm\", \"2m\") as \"Time\", avg(duration) as \"Session Duration\" from usersession ",
       "type": "COLUMN_CHART",
       "visualizationConfig": {

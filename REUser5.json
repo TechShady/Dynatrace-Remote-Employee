@@ -228,7 +228,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Sessions",
+      "customName": "Errors",
       "query": "Select DISTINCT DATETIME(starttime, \"HH:mm\", \"2m\") as \"Time\", sum(totalErrorCount) as \"Errors\" from usersession ",
       "type": "COLUMN_CHART",
       "visualizationConfig": {

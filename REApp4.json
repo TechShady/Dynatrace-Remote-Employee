@@ -269,14 +269,14 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "Active Sessions",
+        "customName": "Load Action Duration",
         "defaultName": "Custom chart",
         "chartConfig": {
           "legendShown": true,
           "type": "TIMESERIES",
           "series": [
             {
-              "metric": "builtin:apps.web.activeSessions",
+              "metric": "builtin:apps.web.actionDuration.load.browser",
               "aggregation": "NONE",
               "percentile": null,
               "type": "AREA",

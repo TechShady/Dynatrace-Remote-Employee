@@ -269,14 +269,14 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "Active Sessions",
+        "customName": "XHR Action Duration",
         "defaultName": "Custom chart",
         "chartConfig": {
           "legendShown": true,
           "type": "TIMESERIES",
           "series": [
             {
-              "metric": "builtin:apps.web.activeSessions",
+              "metric": "builtin:apps.web.actionDuration.xhr.browser",
               "aggregation": "NONE",
               "percentile": null,
               "type": "AREA",

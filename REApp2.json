@@ -269,14 +269,14 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "Active Sessions",
+        "customName": "Requests",
         "defaultName": "Custom chart",
         "chartConfig": {
           "legendShown": true,
           "type": "TIMESERIES",
           "series": [
             {
-              "metric": "builtin:apps.web.activeSessions",
+              "metric": "builtin:apps.web.actionCount.category",
               "aggregation": "NONE",
               "percentile": null,
               "type": "AREA",

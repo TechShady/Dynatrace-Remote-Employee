@@ -277,7 +277,7 @@
           "series": [
             {
               "metric": "builtin:apps.web.actionDuration.xhr.browser",
-              "aggregation": "NONE",
+              "aggregation": "AVG",
               "percentile": null,
               "type": "AREA",
               "entityType": "APPLICATION",

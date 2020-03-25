@@ -625,7 +625,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "![Underutilized Infrastructure Links1]()\n## [Host Utilization](#dashboard;id=44120ed2-b65c-496f-81ec-1f28c3d34a7e)\n![]()\n## [Azure Utilization](#dashboard;id=27051d14-fb1b-4308-a695-7ee613312b49)"
+      "markdown": "![Underutilized Infrastructure Links1]()\n## [Host Utilization](#dashboard;id=44120ed2-b65c-496f-81ec-1f28c3d34a7e)\n![]()\n## [Azure Utilization](#dashboard;id=27051d14-fb1b-4308-a695-7ee613312b49)\n![]()\n## [AWS Utilization](#dashboard;id=8ddbf4e6-ee89-479d-83bb-b5f7ce951cbb)"
     },
     {
       "name": "Markdown",

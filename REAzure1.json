@@ -298,7 +298,7 @@
                   "entityDimension": true
                 }
               ],
-              "sortAscending": false,
+              "sortAscending": true,
               "sortColumn": true,
               "aggregationRate": "TOTAL"
             }

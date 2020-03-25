@@ -625,7 +625,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "![Underutilized Infrastructure Links1]()\n## [Host Utilization](#dashboard;id=c6f5dc55-d8d9-4f66-b605-433f205ba38e)\n![]()\n## [Azure Utilization](#dashboard;id=27051d14-fb1b-4308-a695-7ee613312b49)\n![]()\n## [AWS Utilization](#dashboard;id=8ddbf4e6-ee89-479d-83bb-b5f7ce951cbb)\n![]()\n## [VMware Utilization](#dashboard;id=825c6458-41a3-44a7-a53e-5089f6b831d4)"
+      "markdown": "![Underutilized Infrastructure Links1]()\n## [Host Utilization](#dashboard;id=c6f5dc55-d8d9-4f66-b605-433f205ba38e)\n![]()\n## [Azure Utilization](#dashboard;id=27051d14-fb1b-4308-a695-7ee613312b49)\n![]()\n## [AWS Utilization](#dashboard;id=8ddbf4e6-ee89-479d-83bb-b5f7ce951cbb)\n![]()\n## [VMware Utilization](#dashboard;id=825c6458-41a3-44a7-a53e-5089f6b831d4\n![]()\n## [VMware Utilization](#dashboard;id=7932900c-38f9-41e7-a01e-de8616347d07)"
     },
     {
       "name": "Markdown",

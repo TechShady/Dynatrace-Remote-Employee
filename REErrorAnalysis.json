@@ -50,7 +50,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [One Error](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20\"User\",%20totalerrorcount%20as%20\"Errors\"%20FROM%20usersession%20where%20useraction.application%3D\"MyApp\"%20%20and%20totalErrorCount%3D1&visualization=TABLE)"
+      "markdown": "## [One Error](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20\"User\",%20totalerrorcount%20as%20\"Errors\"%20FROM%20usersession%20where%20useraction.application%3D\"MyURLApp\"%20%20and%20totalErrorCount%3D1&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -66,7 +66,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Two - Three Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20\"User\",%20totalerrorcount%20as%20\"Errors\"%20FROM%20usersession%20where%20useraction.application%3D\"MyApp\"%20%20and%20(totalErrorCount>1%20and%20totalErrorCount<4)&visualization=TABLE)"
+      "markdown": "## [Two - Three Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20\"User\",%20totalerrorcount%20as%20\"Errors\"%20FROM%20usersession%20where%20useraction.application%3D\"MyURLApp\"%20%20and%20(totalErrorCount>1%20and%20totalErrorCount<4)&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -82,7 +82,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [More Than Three Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20\"User\",%20totalerrorcount%20as%20\"Errors\"%20FROM%20usersession%20where%20useraction.application%3D\"MyApp\"%20%20and%20totalErrorCount>3&visualization=TABLE)"
+      "markdown": "## [More Than Three Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20\"User\",%20totalerrorcount%20as%20\"Errors\"%20FROM%20usersession%20where%20useraction.application%3D\"MyURLApp\"%20%20and%20totalErrorCount>3&visualization=TABLE)"
     },
     {
       "name": "Errors Over Time",
@@ -146,7 +146,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Zero Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20\"User\",%20totalerrorcount%20as%20\"Errors\"%20FROM%20usersession%20where%20useraction.application%3D\"MyApp\"%20%20and%20totalErrorCount%3D0&visualization=TABLE)"
+      "markdown": "## [Zero Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20\"User\",%20totalerrorcount%20as%20\"Errors\"%20FROM%20usersession%20where%20useraction.application%3D\"MyURLApp\"%20%20and%20totalErrorCount%3D0&visualization=TABLE)"
     },
     {
       "name": "User Sessions Query",

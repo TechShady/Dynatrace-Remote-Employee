@@ -416,7 +416,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "![Analysis Links2]()\n## [MyApp Duration Analysis](#dashboard;id=d9d64605-862d-4640-ac55-236a56ac3cf7)"
+      "markdown": "![Analysis Links2]()\n## [Duration Analysis](#dashboard;id=d9d64605-862d-4640-ac55-236a56ac3cf7)\n![]()\n## [Error Analysis](#dashboard;id=16c54d75-6a76-4df9-a1c2-dd69b48e05ac)"
     },
     {
       "name": "Markdown",

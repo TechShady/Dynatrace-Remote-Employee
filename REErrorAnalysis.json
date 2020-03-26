@@ -1,0 +1,246 @@
+{
+  "metadata": {
+    "configurationVersions": [
+      3
+    ],
+    "clusterVersion": "1.188.92.20200317-152551"
+  },
+  "id": "16c54d75-6a76-4df9-a1c2-dd69b48e05ac",
+  "dashboardMetadata": {
+    "name": "Error Analysis",
+    "shared": false,
+    "owner": "MyEmail",
+    "sharingDetails": {
+      "linkShared": true,
+      "published": false
+    },
+    "dashboardFilter": {
+      "timeframe": "l_2_HOURS",
+      "managementZone": null
+    }
+  },
+  "tiles": [
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 1634,
+        "width": 38,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "![BackButton]()"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 418,
+        "width": 380,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [One Error](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20\"User\",%20totalerrorcount%20as%20\"Errors\"%20FROM%20usersession%20where%20useraction.application%3D\"MyApp\"%20%20and%20totalErrorCount%3D1&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 874,
+        "width": 380,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Two - Three Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20\"User\",%20totalerrorcount%20as%20\"Errors\"%20FROM%20usersession%20where%20useraction.application%3D\"MyApp\"%20%20and%20(totalErrorCount>1%20and%20totalErrorCount<4)&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 1292,
+        "width": 266,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [More Than Three Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20\"User\",%20totalerrorcount%20as%20\"Errors\"%20FROM%20usersession%20where%20useraction.application%3D\"MyApp\"%20%20and%20totalErrorCount>3&visualization=TABLE)"
+    },
+    {
+      "name": "Errors Over Time",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 266,
+        "left": 0,
+        "width": 380,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 304,
+        "left": 874,
+        "width": 798,
+        "height": 532
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "☠",
+      "query": "select distinct name, sum(errorCount) as \"Errors\" from useraction where useraction.application=\"MyApp\"  order by sum(errorCount) DESC",
+      "type": "COLUMN_CHART"
+    },
+    {
+      "name": "Top User Actions",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 266,
+        "left": 874,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 0,
+        "width": 380,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Zero Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20\"User\",%20totalerrorcount%20as%20\"Errors\"%20FROM%20usersession%20where%20useraction.application%3D\"MyApp\"%20%20and%20totalErrorCount%3D0&visualization=TABLE)"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 418,
+        "width": 380,
+        "height": 190
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "😐",
+      "query": "select count(distinct userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\"  and totalErrorCount=1",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 0,
+        "width": 380,
+        "height": 190
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "🏎",
+      "query": "select count(distinct userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\"  and totalErrorCount=0",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 874,
+        "width": 380,
+        "height": 190
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "😕",
+      "query": "select count(distinct userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\"  and (totalErrorCount>1 and totalErrorCount<4)",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 1292,
+        "width": 380,
+        "height": 190
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "😟",
+      "query": "select count(distinct userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\"  and totalErrorCount>3",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 304,
+        "left": 0,
+        "width": 798,
+        "height": 532
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "☠",
+      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", sum(errorcount) as \"Errors\" FROM useraction where useraction.application=\"MyApp\"  ",
+      "type": "COLUMN_CHART"
+    }
+  ]
+}

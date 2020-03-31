@@ -280,7 +280,7 @@
         "managementZone": null
       },
       "customName": "Errors by IP",
-      "query": "Select ip, sum(useraction.errorCount) FROM usersession where useraction.application=\"MyApp\" ipClause and useraction.errorCount>0 group by IP order by sum(useraction.errorCount) DESC LIMIT 10",
+      "query": "Select ip, sum(totalErrorCount) FROM usersession where useraction.application=\"MyApp\" ipClause and totalErrorCount>0 group by IP order by sum(totalErrorCount) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -299,7 +299,7 @@
         "managementZone": null
       },
       "customName": "Errors by ISP",
-      "query": "Select isp, sum(useraction.errorCount) FROM usersession where useraction.application=\"MyApp\" ipClause and useraction.errorCount>0 group by IsP order by sum(useraction.errorCount) DESC LIMIT 10",
+      "query": "Select isp, sum(totalErrorCount) FROM usersession where useraction.application=\"MyApp\" ipClause and totalErrorCount>0 group by IsP order by sum(totalErrorCount) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -318,7 +318,7 @@
         "managementZone": null
       },
       "customName": "Errors by Browser",
-      "query": "Select browserFamily, sum(useraction.errorCount) FROM usersession where useraction.application=\"MyApp\" ipClause and useraction.errorCount>0 group by browserFamily order by sum(useraction.errorCount) DESC LIMIT 10",
+      "query": "Select browserFamily, sum(totalErrorCount) FROM usersession where useraction.application=\"MyApp\" ipClause and totalErrorCount>0 group by browserFamily order by sum(totalErrorCount) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -337,7 +337,7 @@
         "managementZone": null
       },
       "customName": "Errors by City",
-      "query": "Select city, sum(useraction.errorCount) FROM usersession where useraction.application=\"MyApp\" ipClause and useraction.errorCount>0 group by city order by sum(useraction.errorCount) DESC LIMIT 10",
+      "query": "Select city, sum(totalErrorCount) FROM usersession where useraction.application=\"MyApp\" ipClause and totalErrorCount>0 group by city order by sum(totalErrorCount) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },

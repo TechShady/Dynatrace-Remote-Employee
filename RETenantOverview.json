@@ -38,7 +38,7 @@
         "managementZone": null
       },
       "customName": "Duration by IP",
-      "query": "Select ip, avg(useraction.duration) FROM usersession where ip is not null group by IP order by avg(useraction.duration) DESC LIMIT 10",
+      "query": "Select ip, avg(useraction.duration) FROM usersession where ipClause ip is not null group by IP order by avg(useraction.duration) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -57,7 +57,7 @@
         "managementZone": null
       },
       "customName": "Duration by ISP",
-      "query": "Select isp, avg(useraction.duration) FROM usersession where isp is not null group by IsP order by avg(useraction.duration) DESC LIMIT 10",
+      "query": "Select isp, avg(useraction.duration) FROM usersession where ipClause isp is not null group by IsP order by avg(useraction.duration) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -76,7 +76,7 @@
         "managementZone": null
       },
       "customName": "Duration by City",
-      "query": "Select city, avg(useraction.duration) FROM usersession where city is not null group by city order by avg(useraction.duration) DESC LIMIT 10",
+      "query": "Select city, avg(useraction.duration) FROM usersession ipClause where city is not null group by city order by avg(useraction.duration) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -95,7 +95,7 @@
         "managementZone": null
       },
       "customName": "Duration by Browser",
-      "query": "Select browserfamily, avg(useraction.duration) FROM usersession where browserfamily is not null group by browserfamily order by avg(useraction.duration) DESC LIMIT 10",
+      "query": "Select browserfamily, avg(useraction.duration) FROM usersession ipClause where browserfamily is not null group by browserfamily order by avg(useraction.duration) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -114,7 +114,7 @@
         "managementZone": null
       },
       "customName": "Errors by IP",
-      "query": "Select ip, sum(useraction.errorCount) FROM usersession where ip is not null and useraction.errorCount>0 group by IP order by sum(useraction.errorCount) DESC LIMIT 10",
+      "query": "Select ip, sum(useraction.errorCount) FROM usersession ipClause where ip is not null and useraction.errorCount>0 group by IP order by sum(useraction.errorCount) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -133,7 +133,7 @@
         "managementZone": null
       },
       "customName": "Errors by ISP",
-      "query": "Select isp, sum(useraction.errorCount) FROM usersession where isp is not null and useraction.errorCount>0 group by IsP order by sum(useraction.errorCount) DESC LIMIT 10",
+      "query": "Select isp, sum(useraction.errorCount) FROM usersession ipClause where isp is not null and useraction.errorCount>0 group by IsP order by sum(useraction.errorCount) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -152,7 +152,7 @@
         "managementZone": null
       },
       "customName": "Errors by Browser",
-      "query": "Select browserFamily, sum(useraction.errorCount) FROM usersession where browserfamily is not null and useraction.errorCount>0 group by browserFamily order by sum(useraction.errorCount) DESC LIMIT 10",
+      "query": "Select browserFamily, sum(useraction.errorCount) FROM usersession ipClause where browserfamily is not null and useraction.errorCount>0 group by browserFamily order by sum(useraction.errorCount) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -171,7 +171,7 @@
         "managementZone": null
       },
       "customName": "Errors by City",
-      "query": "Select city, sum(useraction.errorCount) FROM usersession where city is not null and useraction.errorCount>0 group by city order by sum(useraction.errorCount) DESC LIMIT 10",
+      "query": "Select city, sum(useraction.errorCount) FROM usersession ipClause where city is not null and useraction.errorCount>0 group by city order by sum(useraction.errorCount) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -287,38 +287,6 @@
       "configured": true,
       "bounds": {
         "top": 1178,
-        "left": 684,
-        "width": 418,
-        "height": 494
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "markdown": "![Underutilized Infrastructure Links1]()\n## [Host Utilization](#dashboard;id=c6f5dc55-d8d9-4f66-b605-433f205ba38e)\n![]()\n## [Azure Utilization](#dashboard;id=27051d14-fb1b-4308-a695-7ee613312b49)\n![]()\n## [AWS Utilization](#dashboard;id=8ddbf4e6-ee89-479d-83bb-b5f7ce951cbb)\n![]()\n## [VMware Utilization](#dashboard;id=825c6458-41a3-44a7-a53e-5089f6b831d4)\n![]()\n## [Container Utilization](#dashboard;id=7932900c-38f9-41e7-a01e-de8616347d07)"
-    },
-    {
-      "name": "Markdown",
-      "tileType": "MARKDOWN",
-      "configured": true,
-      "bounds": {
-        "top": 1178,
-        "left": 1102,
-        "width": 304,
-        "height": 494
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "markdown": "![Infrastructure Links1]()\n![]()\n## [CPU Utilization](#dashboard;id=9cb1b9b3-e885-4bbc-9a01-d9a46feda734)\n![]()\n## [Memory Utilization](#dashboard;id=9bd2fedb-b3d2-4add-ad30-82a4333da734)\n![]()\n## [Network Utilization](#dashboard;id=f2fe11ab-4a93-4b64-aa58-8203c4fda734)\n![]()\n## [Disk Utilization](#dashboard;id=0663ef55-a070-4455-8ec8-080e736da734)"
-    },
-    {
-      "name": "Markdown",
-      "tileType": "MARKDOWN",
-      "configured": true,
-      "bounds": {
-        "top": 1178,
         "left": 1406,
         "width": 266,
         "height": 494
@@ -343,7 +311,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "![Overview Links]()\n## [Applications Overview](#dashboard;id=e75c3a2a-731d-49c0-8048-3206a4acca77)\n![]()\n## [Users Overview](#dashboard;id=12fd53cc-8f5b-4478-9558-ab9e9d16c439)\n![]()\n\n## [Host Overview](#dashboard;id=af663a92-726d-494f-addd-3e92461da734)\n![]()\n## [Service Overview](#dashboard;id=af663a92-726d-494f-addd-3e9246dda734)"
+      "markdown": "![Overview Links]()\n## [Applications Overview](#dashboard;id=e75c3a2a-731d-49c0-8048-3206a4acca77)\n![]()\n## [Users Overview](#dashboard;id=12fd53cc-8f5b-4478-9558-ab9e9d16c439)\n![]()\n\n## [Service Overview](#dashboard;id=af663a92-726d-494f-addd-3e9246dda734)"
     },
     {
       "name": "User Sessions Query",
@@ -360,7 +328,7 @@
         "managementZone": null
       },
       "customName": "Requests by IP",
-      "query": "Select ip, count(*) FROM usersession where ip is not null group by IP order by count(*) DESC LIMIT 10",
+      "query": "Select ip, count(*) FROM usersession ipClause where ip is not null group by IP order by count(*) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -379,7 +347,7 @@
         "managementZone": null
       },
       "customName": "Requests by ISP",
-      "query": "Select isp, count(*) FROM usersession where isp is not null group by IsP order by count(*) DESC LIMIT 10",
+      "query": "Select isp, count(*) FROM usersession ipClause where isp is not null group by IsP order by count(*) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -398,7 +366,7 @@
         "managementZone": null
       },
       "customName": "Requests by Browser",
-      "query": "Select browserfamily, count(*) FROM usersession where browserfamily is not null group by browserfamily order by count(*) DESC LIMIT 10",
+      "query": "Select browserfamily, count(*) FROM usersession ipClause where browserfamily is not null group by browserfamily order by count(*) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -417,7 +385,7 @@
         "managementZone": null
       },
       "customName": "Requests by City",
-      "query": "Select city, count(*) FROM usersession where city is not null group by city order by count(*) DESC LIMIT 10",
+      "query": "Select city, count(*) FROM usersession ipClause where city is not null group by city order by count(*) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -436,7 +404,7 @@
         "managementZone": null
       },
       "customName": "Errors by Application",
-      "query": "Select useraction.application, sum(useraction.errorCount) FROM usersession where useraction.application is not null group by useraction.application order by sum(useraction.errorCount) DESC LIMIT 10",
+      "query": "Select useraction.application, sum(useraction.errorCount) FROM usersession ipClause where useraction.application is not null group by useraction.application order by sum(useraction.errorCount) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -455,7 +423,7 @@
         "managementZone": null
       },
       "customName": "Requests by Application",
-      "query": "Select useraction.application, count(*) FROM usersession where useraction.application is not null group by useraction.application order by count(*) DESC LIMIT 10",
+      "query": "Select useraction.application, count(*) FROM usersession where ipClause useraction.application is not null group by useraction.application order by count(*) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -474,7 +442,7 @@
         "managementZone": null
       },
       "customName": "Duration by Application",
-      "query": "Select useraction.application, avg(useraction.duration) FROM usersession where useraction.application is not null group by useraction.application order by avg(useraction.duration) DESC LIMIT 10",
+      "query": "Select useraction.application, avg(useraction.duration) FROM usersession ipClause where useraction.application is not null group by useraction.application order by avg(useraction.duration) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -493,7 +461,7 @@
         "managementZone": null
       },
       "customName": "Requests",
-      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", count(userSessionId) as \"Requests\" from usersession where useraction.application is not null",
+      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", count(userSessionId) as \"Requests\" from usersession ipClause where useraction.application is not null",
       "type": "LINE_CHART",
       "visualizationConfig": {
         "hasAxisBucketing": true
@@ -515,7 +483,7 @@
         "managementZone": null
       },
       "customName": "Duration",
-      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", avg(useraction.duration) as \"Duration\" from usersession where useraction.application is not null",
+      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", avg(useraction.duration) as \"Duration\" from usersession ipClause where useraction.application is not null",
       "type": "LINE_CHART",
       "visualizationConfig": {
         "hasAxisBucketing": true
@@ -537,7 +505,7 @@
         "managementZone": null
       },
       "customName": "Errors",
-      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", sum(totalErrorCount) as \"Errors\" from usersession where useraction.application is not null",
+      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", sum(totalErrorCount) as \"Errors\" from usersession ipClause where useraction.application is not null",
       "type": "LINE_CHART",
       "visualizationConfig": {
         "hasAxisBucketing": true

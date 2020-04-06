@@ -17,7 +17,11 @@
     "dashboardFilter": {
       "timeframe": "l_2_HOURS",
       "managementZone": null
-    }
+    },
+    "tags": [
+      "Analysis",
+      "MyApp"
+	  ]
   },
   "tiles": [
     {
@@ -114,7 +118,7 @@
         "managementZone": null
       },
       "customName": "☠",
-      "query": "select distinct name, sum(errorCount) as \"Errors\" from useraction where useraction.application=\"MyApp\"  order by sum(errorCount) DESC",
+      "query": "select distinct name, sum(errorCount) as \"Errors\" from useraction where useraction.application=\"MyApp\" ipClause order by sum(errorCount) DESC",
       "type": "COLUMN_CHART"
     },
     {
@@ -163,7 +167,7 @@
         "managementZone": null
       },
       "customName": "😐",
-      "query": "select count(distinct userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\"  and totalErrorCount=1",
+      "query": "select count(distinct userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\" ipClause and totalErrorCount=1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -182,7 +186,7 @@
         "managementZone": null
       },
       "customName": "🏎",
-      "query": "select count(distinct userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\"  and totalErrorCount=0",
+      "query": "select count(distinct userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\" ipClause and totalErrorCount=0",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -201,7 +205,7 @@
         "managementZone": null
       },
       "customName": "😕",
-      "query": "select count(distinct userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\"  and (totalErrorCount>1 and totalErrorCount<4)",
+      "query": "select count(distinct userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\" ipClause and (totalErrorCount>1 and totalErrorCount<4)",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -220,7 +224,7 @@
         "managementZone": null
       },
       "customName": "😟",
-      "query": "select count(distinct userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\"  and totalErrorCount>3",
+      "query": "select count(distinct userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\" ipClause and totalErrorCount>3",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -239,7 +243,7 @@
         "managementZone": null
       },
       "customName": "☠",
-      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", sum(errorcount) as \"Errors\" FROM useraction where useraction.application=\"MyApp\"  ",
+      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", sum(errorcount) as \"Errors\" FROM useraction where useraction.application=\"MyApp\" ipClause ",
       "type": "COLUMN_CHART"
     }
   ]

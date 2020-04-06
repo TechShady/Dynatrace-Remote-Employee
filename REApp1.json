@@ -19,7 +19,8 @@
       "managementZone": null
     },
     "tags": [
-      "Overview"
+      "Overview",
+	  "MyApp"
     ]
   },
   "tiles": [

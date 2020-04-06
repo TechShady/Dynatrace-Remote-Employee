@@ -19,7 +19,8 @@
       "managementZone": null
     },
     "tags": [
-      "Overview"
+      "Overview",
+      "MyApp"
     ]
   },
   "tiles": [
@@ -134,7 +135,7 @@
         "managementZone": null
       },
       "customName": "Requests",
-      "query": "Select ip as \"IP Address\", sum(userActionCount) as \"Requests\" from usersession group by ip order by Requests DESC",
+      "query": "Select ip as \"IP Address\", sum(userActionCount) as \"Requests\" from usersession useraction.application=\"MyApp\" ipClause group by ip order by Requests DESC",
       "type": "TABLE",
       "limit": 50
     },
@@ -153,7 +154,7 @@
         "managementZone": null
       },
       "customName": "Sessions",
-      "query": "Select ip as \"IP Address\", count(usersessionid) as \"Sessions\" from usersession group by ip order by Sessions DESC",
+      "query": "Select ip as \"IP Address\", count(usersessionid) as \"Sessions\" from usersession usersession useraction.application=\"MyApp\" ipClause group by ip order by Sessions DESC",
       "type": "TABLE",
       "limit": 50
     },
@@ -172,7 +173,7 @@
         "managementZone": null
       },
       "customName": "Errors",
-      "query": "Select ip as \"IP Address\", sum(totalErrorCount) as \"Errors\" from usersession group by ip order by Errors DESC",
+      "query": "Select ip as \"IP Address\", sum(totalErrorCount) as \"Errors\" from usersession usersession useraction.application=\"MyApp\" ipClause group by ip order by Errors DESC",
       "type": "TABLE",
       "limit": 50
     },
@@ -191,7 +192,7 @@
         "managementZone": null
       },
       "customName": "Session Duration",
-      "query": "Select ip as \"IP Address\", avg(duration) as \"Session Duration\" from usersession group by ip order by avg(duration) DESC",
+      "query": "Select ip as \"IP Address\", avg(duration) as \"Session Duration\" from usersession usersession useraction.application=\"MyApp\" ipClause group by ip order by avg(duration) DESC",
       "type": "TABLE",
       "limit": 50
     },
@@ -210,7 +211,7 @@
         "managementZone": null
       },
       "customName": "Action Duration",
-      "query": "Select ip as \"IP Address\", avg(useraction.duration) as \"Action Duration\" from usersession group by ip order by avg(useraction.duration) DESC",
+      "query": "Select ip as \"IP Address\", avg(useraction.duration) as \"Action Duration\" from usersession usersession useraction.application=\"MyApp\" ipClause group by ip order by avg(useraction.duration) DESC",
       "type": "TABLE",
       "limit": 50
     },
@@ -229,7 +230,7 @@
         "managementZone": null
       },
       "customName": "Sessions",
-      "query": "Select DISTINCT DATETIME(starttime, \"HH:mm\", \"2m\") as \"Time\", count(usersessionid) as \"Sessions\" from usersession ",
+      "query": "Select DISTINCT DATETIME(starttime, \"HH:mm\", \"2m\") as \"Time\", count(usersessionid) as \"Sessions\" from usersession usersession useraction.application=\"MyApp\" ipClause ",
       "type": "COLUMN_CHART",
       "visualizationConfig": {
         "hasAxisBucketing": true

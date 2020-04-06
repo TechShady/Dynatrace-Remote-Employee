@@ -134,7 +134,7 @@
         "managementZone": null
       },
       "customName": "⏱",
-      "query": "select distinct name, avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyApp\"  order by Duration DESC",
+      "query": "select distinct name, avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyApp\" ipClause order by Duration DESC",
       "type": "COLUMN_CHART",
       "visualizationConfig": {
         "hasAxisBucketing": true
@@ -170,7 +170,7 @@
         "managementZone": null
       },
       "customName": "🐎",
-      "query": "select count(distinct userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\" and not (useraction.duration>3000) and useraction.duration>2000",
+      "query": "select count(distinct userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\" ipClause and not (useraction.duration>3000) and useraction.duration>2000",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic",
       "limit": 50
@@ -190,7 +190,7 @@
         "managementZone": null
       },
       "customName": "🏎",
-      "query": "select count(distinct userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\" and not (useraction.duration>2000)",
+      "query": "select count(distinct userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\" ipClause and not (useraction.duration>2000)",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic",
       "limit": 50
@@ -210,7 +210,7 @@
         "managementZone": null
       },
       "customName": "🐇",
-      "query": "select count(distinct userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\" and not (useraction.duration>8000) and useraction.duration>3000",
+      "query": "select count(distinct userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\" ipClause and not (useraction.duration>8000) and useraction.duration>3000",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic",
       "limit": 50
@@ -230,7 +230,7 @@
         "managementZone": null
       },
       "customName": "🐢",
-      "query": "select count(distinct userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\" and useraction.duration>8000",
+      "query": "select count(distinct userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\" ipClause and useraction.duration>8000",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic",
       "limit": 50
@@ -250,7 +250,7 @@
         "managementZone": null
       },
       "customName": "⏱",
-      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", avg(useraction.duration) as \"Duration\" FROM usersession where useraction.application=\"MyApp\"  ",
+      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", avg(useraction.duration) as \"Duration\" FROM usersession where useraction.application=\"MyApp\" ipClause ",
       "type": "COLUMN_CHART",
       "visualizationConfig": {
         "hasAxisBucketing": true

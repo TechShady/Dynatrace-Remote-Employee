@@ -393,7 +393,7 @@
         "managementZone": null
       },
       "customName": "Requests by Application",
-      "query": "Select useraction.application, count(*) FROM usersession where ipClause useraction.application is not null ipClause group by useraction.application order by count(*) DESC LIMIT 10",
+      "query": "Select useraction.application, count(*) FROM usersession where useraction.application is not null ipClause group by useraction.application order by count(*) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },

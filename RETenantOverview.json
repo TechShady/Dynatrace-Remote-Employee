@@ -38,7 +38,7 @@
         "managementZone": null
       },
       "customName": "Duration by IP",
-      "query": "Select ip, avg(useraction.duration) FROM usersession where ipClause ip is not null group by IP order by avg(useraction.duration) DESC LIMIT 10",
+      "query": "Select ip, avg(useraction.duration) FROM usersession where ip is not null ipClause group by IP order by avg(useraction.duration) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -57,7 +57,7 @@
         "managementZone": null
       },
       "customName": "Duration by ISP",
-      "query": "Select isp, avg(useraction.duration) FROM usersession where ipClause isp is not null group by IsP order by avg(useraction.duration) DESC LIMIT 10",
+      "query": "Select isp, avg(useraction.duration) FROM usersession where isp is not null ipClause group by IsP order by avg(useraction.duration) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -76,7 +76,7 @@
         "managementZone": null
       },
       "customName": "Duration by City",
-      "query": "Select city, avg(useraction.duration) FROM usersession ipClause where city is not null group by city order by avg(useraction.duration) DESC LIMIT 10",
+      "query": "Select city, avg(useraction.duration) FROM usersession where city is not null ipClause group by city order by avg(useraction.duration) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -95,7 +95,7 @@
         "managementZone": null
       },
       "customName": "Duration by Browser",
-      "query": "Select browserfamily, avg(useraction.duration) FROM usersession ipClause where browserfamily is not null group by browserfamily order by avg(useraction.duration) DESC LIMIT 10",
+      "query": "Select browserfamily, avg(useraction.duration) FROM usersession where browserfamily is not null ipClause group by browserfamily order by avg(useraction.duration) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -114,7 +114,7 @@
         "managementZone": null
       },
       "customName": "Errors by IP",
-      "query": "Select ip, sum(useraction.errorCount) FROM usersession ipClause where ip is not null and useraction.errorCount>0 group by IP order by sum(useraction.errorCount) DESC LIMIT 10",
+      "query": "Select ip, sum(useraction.errorCount) FROM usersession where ip is not null and useraction.errorCount>0 ipClause group by IP order by sum(useraction.errorCount) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -133,7 +133,7 @@
         "managementZone": null
       },
       "customName": "Errors by ISP",
-      "query": "Select isp, sum(useraction.errorCount) FROM usersession ipClause where isp is not null and useraction.errorCount>0 group by IsP order by sum(useraction.errorCount) DESC LIMIT 10",
+      "query": "Select isp, sum(useraction.errorCount) FROM usersession where isp is not null and useraction.errorCount>0 ipClause group by IsP order by sum(useraction.errorCount) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -152,7 +152,7 @@
         "managementZone": null
       },
       "customName": "Errors by Browser",
-      "query": "Select browserFamily, sum(useraction.errorCount) FROM usersession ipClause where browserfamily is not null and useraction.errorCount>0 group by browserFamily order by sum(useraction.errorCount) DESC LIMIT 10",
+      "query": "Select browserFamily, sum(useraction.errorCount) FROM usersession where browserfamily is not null and useraction.errorCount>0 ipClause group by browserFamily order by sum(useraction.errorCount) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -171,7 +171,7 @@
         "managementZone": null
       },
       "customName": "Errors by City",
-      "query": "Select city, sum(useraction.errorCount) FROM usersession ipClause where city is not null and useraction.errorCount>0 group by city order by sum(useraction.errorCount) DESC LIMIT 10",
+      "query": "Select city, sum(useraction.errorCount) FROM usersession where city is not null and useraction.errorCount>0 ipClause group by city order by sum(useraction.errorCount) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -298,7 +298,7 @@
         "managementZone": null
       },
       "customName": "Requests by IP",
-      "query": "Select ip, count(*) FROM usersession ipClause where ip is not null group by IP order by count(*) DESC LIMIT 10",
+      "query": "Select ip, count(*) FROM usersession where ip is not null ipClause group by IP order by count(*) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -317,7 +317,7 @@
         "managementZone": null
       },
       "customName": "Requests by ISP",
-      "query": "Select isp, count(*) FROM usersession ipClause where isp is not null group by IsP order by count(*) DESC LIMIT 10",
+      "query": "Select isp, count(*) FROM usersession where isp is not null ipClause group by IsP order by count(*) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -336,7 +336,7 @@
         "managementZone": null
       },
       "customName": "Requests by Browser",
-      "query": "Select browserfamily, count(*) FROM usersession ipClause where browserfamily is not null group by browserfamily order by count(*) DESC LIMIT 10",
+      "query": "Select browserfamily, count(*) FROM usersession where browserfamily is not null ipClause group by browserfamily order by count(*) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -355,7 +355,7 @@
         "managementZone": null
       },
       "customName": "Requests by City",
-      "query": "Select city, count(*) FROM usersession ipClause where city is not null group by city order by count(*) DESC LIMIT 10",
+      "query": "Select city, count(*) FROM usersession where city is not null ipClause group by city order by count(*) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -374,7 +374,7 @@
         "managementZone": null
       },
       "customName": "Errors by Application",
-      "query": "Select useraction.application, sum(useraction.errorCount) FROM usersession ipClause where useraction.application is not null group by useraction.application order by sum(useraction.errorCount) DESC LIMIT 10",
+      "query": "Select useraction.application, sum(useraction.errorCount) FROM usersession where useraction.application is not null ipClause group by useraction.application order by sum(useraction.errorCount) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -393,7 +393,7 @@
         "managementZone": null
       },
       "customName": "Requests by Application",
-      "query": "Select useraction.application, count(*) FROM usersession where ipClause useraction.application is not null group by useraction.application order by count(*) DESC LIMIT 10",
+      "query": "Select useraction.application, count(*) FROM usersession where ipClause useraction.application is not null ipClause group by useraction.application order by count(*) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -412,7 +412,7 @@
         "managementZone": null
       },
       "customName": "Duration by Application",
-      "query": "Select useraction.application, avg(useraction.duration) FROM usersession ipClause where useraction.application is not null group by useraction.application order by avg(useraction.duration) DESC LIMIT 10",
+      "query": "Select useraction.application, avg(useraction.duration) FROM usersession where useraction.application is not null ipClause group by useraction.application order by avg(useraction.duration) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -431,7 +431,7 @@
         "managementZone": null
       },
       "customName": "Requests",
-      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", count(userSessionId) as \"Requests\" from usersession ipClause where useraction.application is not null",
+      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", count(userSessionId) as \"Requests\" from usersession where useraction.application is not null ipClause",
       "type": "LINE_CHART",
       "visualizationConfig": {
         "hasAxisBucketing": true
@@ -453,7 +453,7 @@
         "managementZone": null
       },
       "customName": "Duration",
-      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", avg(useraction.duration) as \"Duration\" from usersession ipClause where useraction.application is not null",
+      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", avg(useraction.duration) as \"Duration\" from usersession where useraction.application is not null ipClause",
       "type": "LINE_CHART",
       "visualizationConfig": {
         "hasAxisBucketing": true
@@ -475,7 +475,7 @@
         "managementZone": null
       },
       "customName": "Errors",
-      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", sum(totalErrorCount) as \"Errors\" from usersession ipClause where useraction.application is not null",
+      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", sum(totalErrorCount) as \"Errors\" from usersession where useraction.application is not null ipClause",
       "type": "LINE_CHART",
       "visualizationConfig": {
         "hasAxisBucketing": true

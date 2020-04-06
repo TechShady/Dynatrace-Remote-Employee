@@ -410,7 +410,7 @@
         "managementZone": null
       },
       "customName": "Duration by IP",
-      "query": "Select ip, avg(useraction.duration) FROM usersession group by IP order by avg(useraction.duration) DESC LIMIT 10",
+      "query": "Select ip, avg(useraction.duration) FROM usersession where ip is not null ipClause group by IP order by avg(useraction.duration) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -429,7 +429,7 @@
         "managementZone": null
       },
       "customName": "Duration by Carrier",
-      "query": "Select carrier, avg(useraction.duration) FROM usersession where Carrier<>\"-\" group by Carrier order by avg(useraction.duration) DESC LIMIT 10",
+      "query": "Select carrier, avg(useraction.duration) FROM usersession where Carrier<>\"-\" ipClause group by Carrier order by avg(useraction.duration) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -448,7 +448,7 @@
         "managementZone": null
       },
       "customName": "Duration by Network Technology",
-      "query": "Select networkTechnology, avg(useraction.duration) FROM usersession where networkTechnology<>\"-\" group by networkTechnology order by avg(useraction.duration) DESC LIMIT 10",
+      "query": "Select networkTechnology, avg(useraction.duration) FROM usersession where networkTechnology<>\"-\" ipClause group by networkTechnology order by avg(useraction.duration) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -467,7 +467,7 @@
         "managementZone": null
       },
       "customName": "Duration by OS Version",
-      "query": "Select osversion, avg(useraction.duration) FROM usersession group by osversion order by avg(useraction.duration) DESC LIMIT 10",
+      "query": "Select osversion, avg(useraction.duration) FROM usersession where osversion is not null ipClause group by osversion order by avg(useraction.duration) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -486,7 +486,7 @@
         "managementZone": null
       },
       "customName": "Crashes by IP",
-      "query": "Select ip, count(useraction.hasCrash) FROM usersession group by IP order by count(useraction.hasCrash) DESC LIMIT 10",
+      "query": "Select ip, count(useraction.hasCrash) FROM usersession where ip is not null ipClause group by IP order by count(useraction.hasCrash) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -505,7 +505,7 @@
         "managementZone": null
       },
       "customName": "Crashes by OS Version",
-      "query": "Select OSVERSION, count(useraction.hasCrash) FROM usersession group by OSVERSION order by count(useraction.hasCrash) DESC LIMIT 10",
+      "query": "Select OSVERSION, count(useraction.hasCrash) FROM usersession where osversion is not null ipClause group by OSVERSION order by count(useraction.hasCrash) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -524,7 +524,7 @@
         "managementZone": null
       },
       "customName": "Crashes by Carrier",
-      "query": "Select Carrier, count(useraction.hasCrash) FROM usersession where Carrier<>\"-\" group by Carrier order by count(useraction.hasCrash) DESC LIMIT 10",
+      "query": "Select Carrier, count(useraction.hasCrash) FROM usersession where Carrier<>\"-\" ipClause group by Carrier order by count(useraction.hasCrash) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },
@@ -543,7 +543,7 @@
         "managementZone": null
       },
       "customName": "Crashes by Network Technology",
-      "query": "Select networkTechnology, count(useraction.hasCrash) FROM usersession where networkTechnology<>\"-\" group by networkTechnology order by count(useraction.hasCrash) DESC LIMIT 10",
+      "query": "Select networkTechnology, count(useraction.hasCrash) FROM usersession where networkTechnology<>\"-\" ipClause group by networkTechnology order by count(useraction.hasCrash) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },

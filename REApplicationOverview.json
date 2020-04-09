@@ -1,439 +1,498 @@
 {
-  "metadata": {
-    "configurationVersions": [
-      3
-    ],
-    "clusterVersion": "1.191.0.20200318-160539"
-  },
-  "id": "fbe8d3b1-ccb9-480c-9e5d-0e1b8b4da777",
-  "dashboardMetadata": {
-    "name": "\ud83d\ude80 MyApp Portal",
-    "shared": true,
-    "owner": "MyEmail",
-    "sharingDetails": {
-      "linkShared": true,
-      "published": true
+    "metadata": {
+        "configurationVersions": [3],
+        "clusterVersion": "1.192.0.20200408-205558"
     },
-    "dashboardFilter": {
-      "timeframe": "l_2_HOURS",
-      "managementZone": null
+    "id": "bbbbbbbb-0001-0001-0000-000000000000",
+    "dashboardMetadata": {
+        "name": "\uD83D\uDE80 MyApp App Portal",
+        "shared": true,
+        "owner": "MyEmail",
+        "sharingDetails": {
+            "linkShared": true,
+            "published": false
+        },
+        "dashboardFilter": {
+            "timeframe": "l_2_HOURS"
+        },
+        "tags": ["Portal", "MyApp"]
     },
-    "tags": [
-      "Portal",
-      "MyApp"
-    ]
-  },
-  "tiles": [
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 38,
-        "left": 0,
-        "width": 304,
-        "height": 190
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": " Satisfied Users",
-      "query": "select count(usersessionid) as \"Users\" from usersession where useraction.application=\"MyApp\" ipClause and userExperienceScore=\"SATISFIED\"",
-      "type": "SINGLE_VALUE",
-      "timeFrameShift": "dynamic",
-      "limit": 50
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 38,
-        "left": 342,
-        "width": 304,
-        "height": 190
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": " Tolerated Users",
-      "query": "select count(usersessionid) as \"Users\" from usersession where useraction.application=\"MyApp\" ipClause and userExperienceScore=\"TOLERATED\"",
-      "type": "SINGLE_VALUE",
-      "timeFrameShift": "dynamic",
-      "limit": 50
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 38,
-        "left": 684,
-        "width": 304,
-        "height": 190
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": " Frustrated Users",
-      "query": "select count(usersessionid) as \"Users\" from usersession where useraction.application=\"MyApp\" ipClause and userExperienceScore=\"FRUSTRATED\"",
-      "type": "SINGLE_VALUE",
-      "timeFrameShift": "dynamic",
-      "limit": 50
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 38,
-        "left": 1026,
-        "width": 304,
-        "height": 190
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": " Duration 90th Percentile",
-      "query": "select PERCENTILE(useraction.duration,90) as \"Duration\" from usersession where useraction.application=\"MyApp\" ipClause",
-      "type": "SINGLE_VALUE",
-      "timeFrameShift": "dynamic",
-      "limit": 50
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 38,
-        "left": 1368,
-        "width": 304,
-        "height": 190
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": " Errors",
-      "query": "select sum(totalErrorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" ipClause",
-      "type": "SINGLE_VALUE",
-      "timeFrameShift": "dynamic",
-      "limit": 50
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 798,
-        "left": 1102,
-        "width": 570,
-        "height": 304
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": "Errors",
-      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", sum(totalErrorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" ipClause",
-      "type": "LINE_CHART",
-      "visualizationConfig": {
-        "hasAxisBucketing": true
-      },
-      "limit": 50
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 798,
-        "left": 570,
-        "width": 532,
-        "height": 304
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": "Duration",
-      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" ipClause",
-      "type": "LINE_CHART",
-      "visualizationConfig": {
-        "hasAxisBucketing": true
-      },
-      "limit": 50
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 798,
-        "left": 0,
-        "width": 570,
-        "height": 304
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": "Requests",
-      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", count(userSessionId) as \"Requests\" from usersession where useraction.application=\"MyApp\" ipClause",
-      "type": "LINE_CHART",
-      "visualizationConfig": {
-        "hasAxisBucketing": true
-      },
-      "limit": 50
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 228,
-        "left": 0,
-        "width": 418,
-        "height": 266
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": "Duration by IP",
-      "query": "Select ip, avg(useraction.duration) FROM usersession where useraction.application=\"MyApp\" ipClause group by IP order by avg(useraction.duration) DESC LIMIT 10",
-      "type": "PIE_CHART",
-      "limit": 50
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 228,
-        "left": 418,
-        "width": 418,
-        "height": 266
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": "Duration by ISP",
-      "query": "Select isp, avg(useraction.duration) FROM usersession where useraction.application=\"MyApp\" ipClause group by IsP order by avg(useraction.duration) DESC LIMIT 10",
-      "type": "PIE_CHART",
-      "limit": 50
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 494,
-        "left": 418,
-        "width": 418,
-        "height": 266
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": "Duration by City",
-      "query": "Select city, avg(useraction.duration) FROM usersession where useraction.application=\"MyApp\" ipClause group by city order by avg(useraction.duration) DESC LIMIT 10",
-      "type": "PIE_CHART",
-      "limit": 50
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 494,
-        "left": 0,
-        "width": 418,
-        "height": 266
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": "Duration by Browser",
-      "query": "Select browserfamily, avg(useraction.duration) FROM usersession where useraction.application=\"MyApp\" ipClause group by browserfamily order by avg(useraction.duration) DESC LIMIT 10",
-      "type": "PIE_CHART",
-      "limit": 50
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 228,
-        "left": 836,
-        "width": 418,
-        "height": 266
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": "Errors by IP",
-      "query": "Select ip, sum(totalErrorCount) FROM usersession where useraction.application=\"MyApp\" ipClause and totalErrorCount>0 group by IP order by sum(totalErrorCount) DESC LIMIT 10",
-      "type": "PIE_CHART",
-      "limit": 50
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 228,
-        "left": 1254,
-        "width": 418,
-        "height": 266
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": "Errors by ISP",
-      "query": "Select isp, sum(totalErrorCount) FROM usersession where useraction.application=\"MyApp\" ipClause and totalErrorCount>0 group by IsP order by sum(totalErrorCount) DESC LIMIT 10",
-      "type": "PIE_CHART",
-      "limit": 50
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 494,
-        "left": 836,
-        "width": 418,
-        "height": 266
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": "Errors by Browser",
-      "query": "Select browserFamily, sum(totalErrorCount) FROM usersession where useraction.application=\"MyApp\" ipClause and totalErrorCount>0 group by browserFamily order by sum(totalErrorCount) DESC LIMIT 10",
-      "type": "PIE_CHART",
-      "limit": 50
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 494,
-        "left": 1254,
-        "width": 418,
-        "height": 266
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": "Errors by City",
-      "query": "Select city, sum(totalErrorCount) FROM usersession where useraction.application=\"MyApp\" ipClause and totalErrorCount>0 group by city order by sum(totalErrorCount) DESC LIMIT 10",
-      "type": "PIE_CHART",
-      "limit": 50
-    },
-    {
-      "name": "Graphs and Portal Links \u25BC",
-      "tileType": "HEADER",
-      "configured": true,
-      "bounds": {
-        "top": 760,
-        "left": 0,
-        "width": 418,
-        "height": 38
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      }
-    },
-    {
-      "name": "Overview Links \u25BC",
-      "tileType": "HEADER",
-      "configured": true,
-      "bounds": {
-        "top": 1102,
-        "left": 0,
-        "width": 342,
-        "height": 38
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      }
-    },
-    {
-      "name": "Analysis Links \u25BC",
-      "tileType": "HEADER",
-      "configured": true,
-      "bounds": {
-        "top": 1102,
-        "left": 570,
-        "width": 342,
-        "height": 38
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      }
-    },
-    {
-      "name": "Markdown",
-      "tileType": "MARKDOWN",
-      "configured": true,
-      "bounds": {
-        "top": 1140,
-        "left": 0,
-        "width": 342,
-        "height": 494
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
+    "tiles": [{
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 38,
+            "left": 76,
+            "width": 304,
+            "height": 190
+        },
+        "tileFilter": {},
+        "customName": " Satisfied Users",
+        "query": "select count(usersessionid) as \"Users\" from usersession where useraction.application=\"MyApp\" ipClause and userExperienceScore=\"SATISFIED\"",
+        "type": "SINGLE_VALUE",
+        "timeFrameShift": "dynamic",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 38,
+            "left": 380,
+            "width": 304,
+            "height": 190
+        },
+        "tileFilter": {},
+        "customName": " Tolerated Users",
+        "query": "select count(usersessionid) as \"Users\" from usersession where useraction.application=\"MyApp\" ipClause and userExperienceScore=\"TOLERATED\"",
+        "type": "SINGLE_VALUE",
+        "timeFrameShift": "dynamic",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 38,
+            "left": 684,
+            "width": 304,
+            "height": 190
+        },
+        "tileFilter": {},
+        "customName": " Frustrated Users",
+        "query": "select count(usersessionid) as \"Users\" from usersession where useraction.application=\"MyApp\" ipClause and userExperienceScore=\"FRUSTRATED\"",
+        "type": "SINGLE_VALUE",
+        "timeFrameShift": "dynamic",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 38,
+            "left": 1596,
+            "width": 304,
+            "height": 190
+        },
+        "tileFilter": {},
+        "customName": " Errors",
+        "query": "select sum(totalErrorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" ipClause",
+        "type": "SINGLE_VALUE",
+        "timeFrameShift": "dynamic",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 1330,
+            "left": 1482,
+            "width": 494,
+            "height": 304
+        },
+        "tileFilter": {},
+        "customName": "Errors",
+        "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", sum(totalErrorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" ipClause",
+        "type": "LINE_CHART",
+        "visualizationConfig": {
+            "hasAxisBucketing": true
+        },
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 1330,
+            "left": 494,
+            "width": 494,
+            "height": 304
+        },
+        "tileFilter": {},
+        "customName": "Duration",
+        "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" ipClause",
+        "type": "LINE_CHART",
+        "visualizationConfig": {
+            "hasAxisBucketing": true
+        },
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 1330,
+            "left": 0,
+            "width": 494,
+            "height": 304
+        },
+        "tileFilter": {},
+        "customName": "Requests",
+        "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", count(userSessionId) as \"Requests\" from usersession where useraction.application=\"MyApp\" ipClause",
+        "type": "LINE_CHART",
+        "visualizationConfig": {
+            "hasAxisBucketing": true
+        },
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 494,
+            "left": 0,
+            "width": 494,
+            "height": 266
+        },
+        "tileFilter": {},
+        "customName": "Duration by IP",
+        "query": "Select ip, avg(useraction.duration) FROM usersession where useraction.application=\"MyApp\" ipClause group by IP order by avg(useraction.duration) DESC LIMIT 10",
+        "type": "PIE_CHART",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 494,
+            "left": 494,
+            "width": 494,
+            "height": 266
+        },
+        "tileFilter": {},
+        "customName": "Duration by ISP",
+        "query": "Select isp, avg(useraction.duration) FROM usersession where useraction.application=\"MyApp\" ipClause group by IsP order by avg(useraction.duration) DESC LIMIT 10",
+        "type": "PIE_CHART",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 494,
+            "left": 1482,
+            "width": 494,
+            "height": 266
+        },
+        "tileFilter": {},
+        "customName": "Duration by City",
+        "query": "Select city, avg(useraction.duration) FROM usersession where useraction.application=\"MyApp\" ipClause group by city order by avg(useraction.duration) DESC LIMIT 10",
+        "type": "PIE_CHART",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 494,
+            "left": 988,
+            "width": 494,
+            "height": 266
+        },
+        "tileFilter": {},
+        "customName": "Duration by Browser",
+        "query": "Select browserfamily, avg(useraction.duration) FROM usersession where useraction.application=\"MyApp\" ipClause group by browserfamily order by avg(useraction.duration) DESC LIMIT 10",
+        "type": "PIE_CHART",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 1026,
+            "left": 0,
+            "width": 494,
+            "height": 266
+        },
+        "tileFilter": {},
+        "customName": "Errors by IP",
+        "query": "Select ip, sum(totalErrorCount) FROM usersession where useraction.application=\"MyApp\" ipClause and totalErrorCount>0 group by IP order by sum(totalErrorCount) DESC LIMIT 10",
+        "type": "PIE_CHART",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 1026,
+            "left": 494,
+            "width": 494,
+            "height": 266
+        },
+        "tileFilter": {},
+        "customName": "Errors by ISP",
+        "query": "Select isp, sum(totalErrorCount) FROM usersession where useraction.application=\"MyApp\" ipClause and totalErrorCount>0 group by IsP order by sum(totalErrorCount) DESC LIMIT 10",
+        "type": "PIE_CHART",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 1026,
+            "left": 988,
+            "width": 494,
+            "height": 266
+        },
+        "tileFilter": {},
+        "customName": "Errors by Browser",
+        "query": "Select browserFamily, sum(totalErrorCount) FROM usersession where useraction.application=\"MyApp\" ipClause and totalErrorCount>0 group by browserFamily order by sum(totalErrorCount) DESC LIMIT 10",
+        "type": "PIE_CHART",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 1026,
+            "left": 1482,
+            "width": 494,
+            "height": 266
+        },
+        "tileFilter": {},
+        "customName": "Errors by City",
+        "query": "Select city, sum(totalErrorCount) FROM usersession where useraction.application=\"MyApp\" ipClause and totalErrorCount>0 group by city order by sum(totalErrorCount) DESC LIMIT 10",
+        "type": "PIE_CHART",
+        "limit": 50
+    }, {
+        "name": "Graphs and Portal Links ▼",
+        "tileType": "HEADER",
+        "configured": true,
+        "bounds": {
+            "top": 1292,
+            "left": 0,
+            "width": 418,
+            "height": 38
+        },
+        "tileFilter": {}
+    }, {
+        "name": "Overview Links ▼",
+        "tileType": "HEADER",
+        "configured": true,
+        "bounds": {
+            "top": 1634,
+            "left": 0,
+            "width": 494,
+            "height": 38
+        },
+        "tileFilter": {}
+    }, {
+        "name": "Analysis Links ▼",
+        "tileType": "HEADER",
+        "configured": true,
+        "bounds": {
+            "top": 1634,
+            "left": 988,
+            "width": 494,
+            "height": 38
+        },
+        "tileFilter": {}
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 1672,
+            "left": 0,
+            "width": 494,
+            "height": 494
+        },
+        "tileFilter": {},
       "markdown": "![Overview Links2]()\n## [MyApp Overview](#dashboard;id=495ab386-5f11-408f-b3d6-7392955e87c1)"
-    },
-    {
-      "name": "Markdown",
-      "tileType": "MARKDOWN",
-      "configured": true,
-      "bounds": {
-        "top": 1140,
-        "left": 570,
-        "width": 342,
-        "height": 494
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 1672,
+            "left": 988,
+            "width": 494,
+            "height": 494
+        },
+        "tileFilter": {},
       "markdown": "![Analysis Links2]()\n## [Duration Analysis](#dashboard;id=d9d64605-862d-4640-ac55-236a56ac3cf7)\n![]()\n## [Error Analysis](#dashboard;id=16c54d75-6a76-4df9-a1c2-dd69b48e05ac)"
-    },
-    {
-      "name": "Markdown",
-      "tileType": "MARKDOWN",
-      "configured": true,
-      "bounds": {
-        "top": 0,
-        "left": 1634,
-        "width": 152,
-        "height": 38
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 0,
+            "left": 1938,
+            "width": 152,
+            "height": 38
+        },
+        "tileFilter": {},
       "markdown": "![BackButton]()"
-    }
-  ]
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 38,
+            "left": 988,
+            "width": 304,
+            "height": 190
+        },
+        "tileFilter": {},
+        "customName": " Duration",
+        "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" ipClause",
+        "type": "SINGLE_VALUE",
+        "timeFrameShift": "dynamic",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 38,
+            "left": 1292,
+            "width": 304,
+            "height": 190
+        },
+        "tileFilter": {},
+        "customName": " Network",
+        "query": "select avg(useraction.networkTime) as \"Network\" from usersession where useraction.application=\"MyApp\" ipClause",
+        "type": "SINGLE_VALUE",
+        "timeFrameShift": "dynamic",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 760,
+            "left": 0,
+            "width": 494,
+            "height": 266
+        },
+        "tileFilter": {},
+        "customName": "Network by IP",
+        "query": "Select ip, avg(useraction.networktime) FROM usersession where useraction.application=\"MyApp\" ipClause group by IP order by avg(useraction.networktime) DESC LIMIT 10",
+        "type": "PIE_CHART",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 760,
+            "left": 494,
+            "width": 494,
+            "height": 266
+        },
+        "tileFilter": {},
+        "customName": "Network by ISP",
+        "query": "Select isp, avg(useraction.networkTime) FROM usersession where useraction.application=\"MyApp\" ipClause group by IsP order by avg(useraction.networktime) DESC LIMIT 10",
+        "type": "PIE_CHART",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 760,
+            "left": 988,
+            "width": 494,
+            "height": 266
+        },
+        "tileFilter": {},
+        "customName": "Network by Browser",
+        "query": "Select browserfamily, avg(useraction.networkTime) FROM usersession where useraction.application=\"MyApp\" ipClause group by browserfamily order by avg(useraction.networktime) DESC LIMIT 10",
+        "type": "PIE_CHART",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 760,
+            "left": 1482,
+            "width": 494,
+            "height": 266
+        },
+        "tileFilter": {},
+        "customName": "Network by City",
+        "query": "Select city, avg(useraction.networkTime) FROM usersession where useraction.application=\"MyApp\" ipClause group by city order by avg(useraction.networktime) DESC LIMIT 10",
+        "type": "PIE_CHART",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 1330,
+            "left": 988,
+            "width": 494,
+            "height": 304
+        },
+        "tileFilter": {},
+        "customName": "Network",
+        "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", avg(useraction.networkTime) as \"Network\" from usersession where useraction.application=\"MyApp\" ipClause",
+        "type": "LINE_CHART",
+        "visualizationConfig": {
+            "hasAxisBucketing": true
+        },
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 228,
+            "left": 0,
+            "width": 494,
+            "height": 266
+        },
+        "tileFilter": {},
+        "customName": "Requests by IP",
+        "query": "Select ip, count(*) FROM usersession where useraction.application=\"MyApp\" ipClause group by IP order by count(*) DESC LIMIT 10",
+        "type": "PIE_CHART",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 228,
+            "left": 494,
+            "width": 494,
+            "height": 266
+        },
+        "tileFilter": {},
+        "customName": "Requests by ISP",
+        "query": "Select isp, count(*) FROM usersession where useraction.application=\"MyApp\" ipClause group by IsP order by count(*) DESC LIMIT 10",
+        "type": "PIE_CHART",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 228,
+            "left": 988,
+            "width": 494,
+            "height": 266
+        },
+        "tileFilter": {},
+        "customName": "Requests by Browser",
+        "query": "Select browserfamily, count(*) FROM usersession where useraction.application=\"MyApp\" ipClause group by browserfamily order by count(*) DESC LIMIT 10",
+        "type": "PIE_CHART",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 228,
+            "left": 1482,
+            "width": 494,
+            "height": 266
+        },
+        "tileFilter": {},
+        "customName": "Requests by City",
+        "query": "Select city, count(*) FROM usersession where useraction.application=\"MyApp\" ipClause group by city order by count(*) DESC LIMIT 10",
+        "type": "PIE_CHART",
+        "limit": 50
+    }]
 }

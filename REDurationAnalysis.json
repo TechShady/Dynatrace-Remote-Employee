@@ -133,7 +133,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "⏱",
+      "customName": "\u23f1",
       "query": "select distinct name, avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyApp\" ipClause order by Duration DESC",
       "type": "COLUMN_CHART",
       "visualizationConfig": {
@@ -169,7 +169,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "🐎",
+      "customName": "\ud83c\udfc7",
       "query": "select count(distinct userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\" ipClause and not (useraction.duration>3000) and useraction.duration>2000",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic",
@@ -189,7 +189,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "🏎",
+      "customName": "\ud83d\udc06",
       "query": "select count(distinct userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\" ipClause and not (useraction.duration>2000)",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic",
@@ -209,7 +209,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "🐇",
+      "customName": "\ud83d\udc07",
       "query": "select count(distinct userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\" ipClause and not (useraction.duration>8000) and useraction.duration>3000",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic",
@@ -229,7 +229,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "🐢",
+      "customName": "\ud83d\udc22",
       "query": "select count(distinct userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\" ipClause and useraction.duration>8000",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic",
@@ -249,7 +249,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "⏱",
+      "customName": "\u23f1",
       "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", avg(useraction.duration) as \"Duration\" FROM usersession where useraction.application=\"MyApp\" ipClause ",
       "type": "COLUMN_CHART",
       "visualizationConfig": {

@@ -54,7 +54,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Very Fast Duration (<2s)](https://MyTenant/ui/user-sessions/query?sessionquery=Select%20IP,useraction.duration%20from%20usersession%20where%20useraction.application%3D%22MyURLApp%22%20and%20not%20(useraction.duration>2000)%20order%20by%20useraction.duration%20DESC&visualization=TABLE)"
+      "markdown": "## [Very Fast Duration (<2s)](https://MyTenant/ui/user-sessions/query?sessionquery=Select%20IP,useraction.duration%20from%20usersession%20where%20useraction.application%3D%22MyURLApp%22%20ipClause%20and%20not%20(useraction.duration>2000)%20order%20by%20useraction.duration%20DESC&visualization=TABLE)"
     },
     {
       "name": "Markdown",

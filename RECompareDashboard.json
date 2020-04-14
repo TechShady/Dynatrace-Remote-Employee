@@ -160,7 +160,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "ipCompareName Errors",
+      "customName": "ipCompareName Network",
       "query": "Select avg(useraction.networkTime) as \"Network\" from usersession where ip is not null ipCompareClause",
       "type": "SINGLE_VALUE"
     },

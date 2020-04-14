@@ -57,6 +57,114 @@
       "type": "SINGLE_VALUE"
     },
     {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 76,
+        "left": 456,
+        "width": 304,
+        "height": 304
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "ipName Duration",
+      "query": "Select avg(useraction.duration) as \"Duration\" from usersession where ip is not null ipClause",
+      "type": "SINGLE_VALUE"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 456,
+        "width": 304,
+        "height": 304
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "ipCompareName Duration",
+      "query": "Select avg(useraction.duration) as \"Duration\" from usersession where ip is not null ipCompareClause",
+      "type": "SINGLE_VALUE"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 76,
+        "left": 760,
+        "width": 304,
+        "height": 304
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "ipName Errors",
+      "query": "Select sum(totalerrorcount) as \"Errors\" from usersession where ip is not null ipClause",
+      "type": "SINGLE_VALUE"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 760,
+        "width": 304,
+        "height": 304
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "ipCompareName Errors",
+      "query": "Select sum(totalerrorcount) as \"Errors\" from usersession where ip is not null ipCompareClause",
+      "type": "SINGLE_VALUE"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 76,
+        "left": 1064,
+        "width": 304,
+        "height": 304
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "ipName Network",
+      "query": "Select avg(useraction.networkTime) as \"Network\" from usersession where ip is not null ipClause",
+      "type": "SINGLE_VALUE"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 1064,
+        "width": 304,
+        "height": 304
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "ipCompareName Errors",
+      "query": "Select avg(useraction.networkTime) as \"Network\" from usersession where ip is not null ipCompareClause",
+      "type": "SINGLE_VALUE"
+    },
+    {
       "name": "ipName",
       "tileType": "HEADER",
       "configured": true,

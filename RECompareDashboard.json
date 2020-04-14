@@ -36,7 +36,9 @@
       },
       "customName": "ipName Requests",
       "query": "Select count(*) as \"Requests\" from usersession where ip is not null ipClause",
-      "type": "SINGLE_VALUE"
+        "type": "SINGLE_VALUE",
+        "timeFrameShift": "dynamic",
+        "limit": 50
     },
     {
       "name": "User Sessions Query",
@@ -54,7 +56,9 @@
       },
       "customName": "ipCompareName Requests",
       "query": "Select count(*) as \"Requests\" from usersession where ip is not null ipCompareClause",
-      "type": "SINGLE_VALUE"
+        "type": "SINGLE_VALUE",
+        "timeFrameShift": "dynamic",
+        "limit": 50
     },
     {
       "name": "User Sessions Query",
@@ -72,7 +76,9 @@
       },
       "customName": "ipName Duration",
       "query": "Select avg(useraction.duration) as \"Duration\" from usersession where ip is not null ipClause",
-      "type": "SINGLE_VALUE"
+        "type": "SINGLE_VALUE",
+        "timeFrameShift": "dynamic",
+        "limit": 50
     },
     {
       "name": "User Sessions Query",
@@ -90,7 +96,9 @@
       },
       "customName": "ipCompareName Duration",
       "query": "Select avg(useraction.duration) as \"Duration\" from usersession where ip is not null ipCompareClause",
-      "type": "SINGLE_VALUE"
+        "type": "SINGLE_VALUE",
+        "timeFrameShift": "dynamic",
+        "limit": 50
     },
     {
       "name": "User Sessions Query",
@@ -108,7 +116,9 @@
       },
       "customName": "ipName Errors",
       "query": "Select sum(totalerrorcount) as \"Errors\" from usersession where ip is not null ipClause",
-      "type": "SINGLE_VALUE"
+        "type": "SINGLE_VALUE",
+        "timeFrameShift": "dynamic",
+        "limit": 50
     },
     {
       "name": "User Sessions Query",
@@ -126,7 +136,9 @@
       },
       "customName": "ipCompareName Errors",
       "query": "Select sum(totalerrorcount) as \"Errors\" from usersession where ip is not null ipCompareClause",
-      "type": "SINGLE_VALUE"
+        "type": "SINGLE_VALUE",
+        "timeFrameShift": "dynamic",
+        "limit": 50
     },
     {
       "name": "User Sessions Query",
@@ -144,7 +156,9 @@
       },
       "customName": "ipName Network",
       "query": "Select avg(useraction.networkTime) as \"Network\" from usersession where ip is not null ipClause",
-      "type": "SINGLE_VALUE"
+        "type": "SINGLE_VALUE",
+        "timeFrameShift": "dynamic",
+        "limit": 50
     },
     {
       "name": "User Sessions Query",
@@ -162,7 +176,9 @@
       },
       "customName": "ipCompareName Network",
       "query": "Select avg(useraction.networkTime) as \"Network\" from usersession where ip is not null ipCompareClause",
-      "type": "SINGLE_VALUE"
+        "type": "SINGLE_VALUE",
+        "timeFrameShift": "dynamic",
+        "limit": 50
     },
     {
       "name": "ipName",

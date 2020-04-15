@@ -155,18 +155,18 @@
         "bounds": {
             "top": 1406,
             "left": 0,
-            "width": 646,
+            "width": 494,
             "height": 38
         },
         "tileFilter": {}
     }, {
-        "name": "Availability Links ▼",
+        "name": "Compare Links ▼",
         "tileType": "HEADER",
         "configured": true,
         "bounds": {
             "top": 1406,
-            "left": 1330,
-            "width": 646,
+            "left": 988,
+            "width": 494,
             "height": 38
         },
         "tileFilter": {}
@@ -176,8 +176,19 @@
         "configured": true,
         "bounds": {
             "top": 1406,
-            "left": 646,
-            "width": 646,
+            "left": 494,
+            "width": 494,
+            "height": 38
+        },
+        "tileFilter": {}
+    }, {
+        "name": "Availability Links ▼",
+        "tileType": "HEADER",
+        "configured": true,
+        "bounds": {
+            "top": 1406,
+            "left": 1482,
+            "width": 494,
             "height": 38
         },
         "tileFilter": {}
@@ -188,7 +199,7 @@
         "bounds": {
             "top": 1444,
             "left": 0,
-            "width": 646,
+            "width": 494,
             "height": 494
         },
         "tileFilter": {},
@@ -199,24 +210,36 @@
         "configured": true,
         "bounds": {
             "top": 1444,
-            "left": 1330,
-            "width": 646,
+            "left": 494,
+            "width": 494,
             "height": 494
         },
         "tileFilter": {},
-      "markdown": "![Availability Links]()\n## [Availability](#dashboard;id=fd4b3162-465b-46ee-a1bc-8f979cfda734)\n![]()\n"
+      "markdown": "![Overview Links]()\n## [Applications Overview](#dashboard;id=e75c3a2a-731d-49c0-8048-3206a4acca77)\n![]()\n## [Users Overview](#dashboard;id=12fd53cc-8f5b-4478-9558-ab9e9d16c439)\n![]()\n\n## [Service Overview](#dashboard;id=af663a92-726d-494f-addd-3e9246dda734)\n![]()\n\n## [Tenant Compare Overview](#dashboard;id=f4d7b317-6b85-44e0-ad69-1fc4ff3b59c3)"
     }, {
         "name": "Markdown",
         "tileType": "MARKDOWN",
         "configured": true,
         "bounds": {
             "top": 1444,
-            "left": 646,
-            "width": 646,
+            "left": 988,
+            "width": 494,
             "height": 494
         },
         "tileFilter": {},
-      "markdown": "![Overview Links]()\n## [Applications Overview](#dashboard;id=e75c3a2a-731d-49c0-8048-3206a4acca77)\n![]()\n## [Users Overview](#dashboard;id=12fd53cc-8f5b-4478-9558-ab9e9d16c439)\n![]()\n\n## [Service Overview](#dashboard;id=af663a92-726d-494f-addd-3e9246dda734)\n![]()\n\n## [Tenant Compare Overview](#dashboard;id=f4d7b317-6b85-44e0-ad69-1fc4ff3b59c3)"
+        "markdown": "![Compare Links]()\n## [Tenant Compare](#dashboard;id=f4d7b317-6b85-44e0-ad69-1fc4ff3b59c3)\n![]()\n"
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 1444,
+            "left": 1482,
+            "width": 494,
+            "height": 494
+        },
+        "tileFilter": {},
+      "markdown": "![Availability Links]()\n## [Availability](#dashboard;id=fd4b3162-465b-46ee-a1bc-8f979cfda734)\n![]()\n"
     }, {
         "name": "User Sessions Query",
         "tileType": "DTAQL",

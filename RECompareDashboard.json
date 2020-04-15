@@ -7,7 +7,7 @@
   },
   "id": "f4d7b317-6b85-44e0-ad69-1fc4ff3b59c3",
   "dashboardMetadata": {
-    "name": "Tenant Compare",
+    "name": "\ud83d\udd26 Tenant Compare",
     "shared": false,
     "owner": "MyEmail",
     "sharingDetails": {
@@ -34,8 +34,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "ipName Requests",
-      "query": "Select count(*) as \"Requests\" from usersession where ip is not null ipClause",
+      "customName": "ipCompare1Name Requests",
+      "query": "Select count(*) as \"Requests\" from usersession where ip is not null ipCompare1Clause",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic",
         "limit": 50
@@ -54,8 +54,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "ipCompareName Requests",
-      "query": "Select count(*) as \"Requests\" from usersession where ip is not null ipCompareClause",
+      "customName": "ipCompare2Name Requests",
+      "query": "Select count(*) as \"Requests\" from usersession where ip is not null ipCompare2Clause",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic",
         "limit": 50
@@ -74,8 +74,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "ipName Duration",
-      "query": "Select avg(useraction.duration) as \"Duration\" from usersession where ip is not null ipClause",
+      "customName": "ipCompare1Name Duration",
+      "query": "Select avg(useraction.duration) as \"Duration\" from usersession where ip is not null ipCompare1Clause",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic",
         "limit": 50
@@ -94,8 +94,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "ipCompareName Duration",
-      "query": "Select avg(useraction.duration) as \"Duration\" from usersession where ip is not null ipCompareClause",
+      "customName": "ipCompare2Name Duration",
+      "query": "Select avg(useraction.duration) as \"Duration\" from usersession where ip is not null ipCompare2Clause",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic",
         "limit": 50
@@ -114,8 +114,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "ipName Errors",
-      "query": "Select sum(totalerrorcount) as \"Errors\" from usersession where ip is not null ipClause",
+      "customName": "ipCompare1Name Errors",
+      "query": "Select sum(totalerrorcount) as \"Errors\" from usersession where ip is not null ipCompare1Clause",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic",
         "limit": 50
@@ -134,8 +134,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "ipCompareName Errors",
-      "query": "Select sum(totalerrorcount) as \"Errors\" from usersession where ip is not null ipCompareClause",
+      "customName": "ipCompare2Name Errors",
+      "query": "Select sum(totalerrorcount) as \"Errors\" from usersession where ip is not null ipCompare2Clause",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic",
         "limit": 50
@@ -154,8 +154,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "ipName Network",
-      "query": "Select avg(useraction.networkTime) as \"Network\" from usersession where ip is not null ipClause",
+      "customName": "ipCompare1Name Network",
+      "query": "Select avg(useraction.networkTime) as \"Network\" from usersession where ip is not null ipCompare1Clause",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic",
         "limit": 50
@@ -174,14 +174,14 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "ipCompareName Network",
-      "query": "Select avg(useraction.networkTime) as \"Network\" from usersession where ip is not null ipCompareClause",
+      "customName": "ipCompare2Name Network",
+      "query": "Select avg(useraction.networkTime) as \"Network\" from usersession where ip is not null ipCompare2Clause",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic",
         "limit": 50
     },
     {
-      "name": "ipName",
+      "name": "ipCompare1Name",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
@@ -196,7 +196,7 @@
       }
     },
     {
-      "name": "ipCompareName",
+      "name": "ipCompare2Name",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {

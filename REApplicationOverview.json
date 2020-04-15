@@ -278,6 +278,17 @@
         },
         "tileFilter": {}
     }, {
+        "name": "Compare Links ▼",
+        "tileType": "HEADER",
+        "configured": true,
+        "bounds": {
+            "top": 1634,
+            "left": 494,
+            "width": 494,
+            "height": 38
+        },
+        "tileFilter": {}
+    }, {
         "name": "Analysis Links ▼",
         "tileType": "HEADER",
         "configured": true,
@@ -300,6 +311,18 @@
         },
         "tileFilter": {},
       "markdown": "![Overview Links2]()\n## [MyApp Overview](#dashboard;id=495ab386-5f11-408f-b3d6-7392955e87c1)"
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 1672,
+            "left": 494,
+            "width": 494,
+            "height": 494
+        },
+        "tileFilter": {},
+      "markdown": "![Compare Links2]()\n## [MyApp Compare](#dashboard;id=f4d7b317-6b85-44e0-ad69-1fc4ff3b59c4)"
     }, {
         "name": "Markdown",
         "tileType": "MARKDOWN",

@@ -256,7 +256,7 @@
         "type": "PIE_CHART",
         "limit": 50
     }, {
-        "name": "Graphs and Portal Links ▼",
+        "name": "Graphs and Portal Links \u25BC",
         "tileType": "HEADER",
         "configured": true,
         "bounds": {
@@ -267,7 +267,7 @@
         },
         "tileFilter": {}
     }, {
-        "name": "Overview Links ▼",
+        "name": "Overview Links \u25BC",
         "tileType": "HEADER",
         "configured": true,
         "bounds": {
@@ -278,7 +278,7 @@
         },
         "tileFilter": {}
     }, {
-        "name": "Compare Links ▼",
+        "name": "Compare Links \u25BC",
         "tileType": "HEADER",
         "configured": true,
         "bounds": {
@@ -289,7 +289,7 @@
         },
         "tileFilter": {}
     }, {
-        "name": "Analysis Links ▼",
+        "name": "Analysis Links \u25BC",
         "tileType": "HEADER",
         "configured": true,
         "bounds": {

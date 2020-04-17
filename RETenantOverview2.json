@@ -563,7 +563,7 @@
       }
     },
     {
-      "name": "Application Links ▼",
+      "name": "Application Links \u25BC",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
@@ -578,7 +578,7 @@
       }
     },
     {
-      "name": "Availability Links ▼",
+      "name": "Availability Links \u25BC",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
@@ -593,7 +593,7 @@
       }
     },
     {
-      "name": "Overview Links ▼",
+      "name": "Overview Links \u25BC",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {

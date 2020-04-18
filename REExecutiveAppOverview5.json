@@ -29,7 +29,7 @@
         },
         "tileFilter": {},
         "customName": "Satisfied Users",
-        "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\"  userExperienceScore=\"SATISFIED\" ipClause",
+        "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"SATISFIED\" ipClause",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic"
     }, {
@@ -44,7 +44,7 @@
         },
         "tileFilter": {},
         "customName": "Tolerated Users",
-        "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\"  userExperienceScore=\"TOLERATED\" ipClause",
+        "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"TOLERATED\" ipClause",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic"
     }, {
@@ -59,7 +59,7 @@
         },
         "tileFilter": {},
         "customName": "Frustrated Users",
-        "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\"  userExperienceScore=\"FRUSTRATED\" ipClause",
+        "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"FRUSTRATED\" ipClause",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic"
     }, {
@@ -74,7 +74,7 @@
         },
         "tileFilter": {},
         "customName": "Sessions",
-        "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\"  ip is not null ipClause ",
+        "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and ip is not null ipClause ",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic"
     }, {
@@ -159,7 +159,7 @@
         },
         "tileFilter": {},
         "customName": "Errors",
-        "query": "select sum(useraction.errorCount) as \"Errors\" from useraction where useraction.application=\"MyApp\"  usersession.ip is not null ipClause",
+        "query": "select sum(useraction.errorCount) as \"Errors\" from useraction where useraction.application=\"MyApp\" and usersession.ip is not null ipClause",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic"
     }, {
@@ -174,7 +174,7 @@
         },
         "tileFilter": {},
         "customName": "DURATION",
-        "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"1m\") as \"Time\", avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\"  ip is not null ipClause",
+        "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"1m\") as \"Time\", avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" and ip is not null ipClause",
         "type": "COLUMN_CHART",
         "visualizationConfig": {
             "hasAxisBucketing": true
@@ -228,7 +228,7 @@
         },
         "tileFilter": {},
         "customName": "Duration",
-        "query": "select avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyApp\"  usersession.ip is not null ipClause",
+        "query": "select avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyApp\" and usersession.ip is not null ipClause",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic",
         "limit": 50

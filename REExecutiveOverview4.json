@@ -29,7 +29,7 @@
         },
         "tileFilter": {},
         "customName": "Satisfied Users",
-        "query": "select count(usersessionid) as \"Sessions\" from usersession where userExperienceScore=\"SATISFIED\"",
+        "query": "select count(usersessionid) as \"Sessions\" from usersession where userExperienceScore=\"SATISFIED\" ipClause",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic"
     }, {
@@ -44,7 +44,7 @@
         },
         "tileFilter": {},
         "customName": "Tolerated Users",
-        "query": "select count(usersessionid) as \"Sessions\" from usersession where userExperienceScore=\"TOLERATED\"",
+        "query": "select count(usersessionid) as \"Sessions\" from usersession where userExperienceScore=\"TOLERATED\" ipClause",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic"
     }, {
@@ -59,7 +59,7 @@
         },
         "tileFilter": {},
         "customName": "Frustrated Users",
-        "query": "select count(usersessionid) as \"Sessions\" from usersession where userExperienceScore=\"FRUSTRATED\"",
+        "query": "select count(usersessionid) as \"Sessions\" from usersession where userExperienceScore=\"FRUSTATED\" ipClause",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic"
     }, {
@@ -74,7 +74,7 @@
         },
         "tileFilter": {},
         "customName": "Sessions",
-        "query": "select count(usersessionid) as \"Sessions\" from usersession",
+        "query": "select count(usersessionid) as \"Sessions\" from usersession where ip is not null ipClause ",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic"
     }, {
@@ -159,7 +159,7 @@
         },
         "tileFilter": {},
         "customName": "Errors",
-        "query": "select sum(useraction.errorCount) as \"Errors\" from useraction",
+        "query": "select sum(useraction.errorCount) as \"Errors\" from useraction where usersession.ip is not null ipClause",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic"
     }, {
@@ -174,7 +174,7 @@
         },
         "tileFilter": {},
         "customName": "Satisfied Users",
-        "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"1m\") as \"Time\", count(*) as \"Satisfied Users\" FROM usersession where userExperienceScore=\"SATISFIED\"",
+        "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"1m\") as \"Time\", count(*) as \"Sessions\" FROM usersession where ip is not null ipClause",
         "type": "COLUMN_CHART",
         "visualizationConfig": {
             "hasAxisBucketing": true
@@ -228,7 +228,7 @@
         },
         "tileFilter": {},
         "customName": "Duration",
-        "query": "select avg(useraction.duration) as \"Duration\" from useraction",
+        "query": "select avg(useraction.duration) as \"Duration\" from useraction where usersession.ip is not null ipClause",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic",
         "limit": 50

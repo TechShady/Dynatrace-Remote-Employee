@@ -59,7 +59,7 @@
         },
         "tileFilter": {},
         "customName": "Frustrated Users",
-        "query": "select count(usersessionid) as \"Sessions\" from usersession where userExperienceScore=\"FRUSTATED\" ipClause",
+        "query": "select count(usersessionid) as \"Sessions\" from usersession where userExperienceScore=\"FRUSTRATED\" ipClause",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic"
     }, {
@@ -173,7 +173,7 @@
             "height": 608
         },
         "tileFilter": {},
-        "customName": "Satisfied Users",
+        "customName": "Frustrated Users",
         "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"1m\") as \"Time\", count(*) as \"Frustrated Users\" FROM usersession where userExperienceScore=\"FRUSTRATED\" ipClause",
         "type": "COLUMN_CHART",
         "visualizationConfig": {

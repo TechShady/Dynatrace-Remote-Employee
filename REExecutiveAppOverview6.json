@@ -1,0 +1,236 @@
+{
+    "metadata": {
+        "configurationVersions": [3],
+        "clusterVersion": "1.193.0.20200417-185056"
+    },
+    "id": "62ec2d6b-23b3-4610-a6ee-208c6063d149",
+    "dashboardMetadata": {
+        "name": "\uD83D\uDD74 Executive Overview",
+        "shared": true,
+        "owner": "MyEmail",
+        "sharingDetails": {
+            "linkShared": true,
+            "published": false
+        },
+        "dashboardFilter": {
+            "timeframe": "l_2_HOURS"
+        },
+        "tags": ["Executive", "Overview"]
+    },
+    "tiles": [{
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 76,
+            "left": 0,
+            "width": 304,
+            "height": 152
+        },
+        "tileFilter": {},
+        "customName": "Satisfied Users",
+        "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\"  userExperienceScore=\"SATISFIED\" ipClause",
+        "type": "SINGLE_VALUE",
+        "timeFrameShift": "dynamic"
+    }, {
+        "name": "DTAQL",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 76,
+            "left": 304,
+            "width": 304,
+            "height": 152
+        },
+        "tileFilter": {},
+        "customName": "Tolerated Users",
+        "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\"  userExperienceScore=\"TOLERATED\" ipClause",
+        "type": "SINGLE_VALUE",
+        "timeFrameShift": "dynamic"
+    }, {
+        "name": "DTAQL",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 76,
+            "left": 608,
+            "width": 304,
+            "height": 152
+        },
+        "tileFilter": {},
+        "customName": "Frustrated Users",
+        "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\"  userExperienceScore=\"FRUSTRATED\" ipClause",
+        "type": "SINGLE_VALUE",
+        "timeFrameShift": "dynamic"
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 76,
+            "left": 912,
+            "width": 304,
+            "height": 152
+        },
+        "tileFilter": {},
+        "customName": "Sessions",
+        "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\"  ip is not null ipClause ",
+        "type": "SINGLE_VALUE",
+        "timeFrameShift": "dynamic"
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 0,
+            "left": 1786,
+            "width": 38,
+            "height": 38
+        },
+        "tileFilter": {},
+        "markdown": "![BackButton]()"
+    }, {
+        "name": "_______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________",
+        "tileType": "HEADER",
+        "configured": true,
+        "bounds": {
+            "top": 38,
+            "left": 0,
+            "width": 1900,
+            "height": 38
+        },
+        "tileFilter": {}
+    }, {
+        "name": "Business Metrics",
+        "tileType": "HEADER",
+        "configured": true,
+        "bounds": {
+            "top": 0,
+            "left": 836,
+            "width": 418,
+            "height": 38
+        },
+        "tileFilter": {}
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 266,
+            "left": 0,
+            "width": 304,
+            "height": 38
+        },
+        "tileFilter": {},
+        "markdown": "## [Satisfied Users](#dashboard;id=62ec2d6b-23b3-4610-a6ee-208c6063d144)"
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 266,
+            "left": 304,
+            "width": 304,
+            "height": 38
+        },
+        "tileFilter": {},
+        "markdown": "## [Tolerated Users](#dashboard;id=62ec2d6b-23b3-4610-a6ee-208c6063d145)"
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 266,
+            "left": 608,
+            "width": 304,
+            "height": 38
+        },
+        "tileFilter": {},
+        "markdown": "## [Frustrated Users](#dashboard;id=62ec2d6b-23b3-4610-a6ee-208c6063d146)"
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 76,
+            "left": 1520,
+            "width": 304,
+            "height": 152
+        },
+        "tileFilter": {},
+        "customName": "Errors",
+        "query": "select sum(useraction.errorCount) as \"Errors\" from useraction where useraction.application=\"MyApp\"  usersession.ip is not null ipClause",
+        "type": "SINGLE_VALUE",
+        "timeFrameShift": "dynamic"
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 304,
+            "left": 0,
+            "width": 1824,
+            "height": 608
+        },
+        "tileFilter": {},
+        "customName": "Errors",
+        "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"1m\") as \"Time\", sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\"  ip is not null ipClause",
+        "type": "COLUMN_CHART",
+        "visualizationConfig": {
+            "hasAxisBucketing": true
+        },
+        "limit": 50
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 266,
+            "left": 912,
+            "width": 304,
+            "height": 38
+        },
+        "tileFilter": {},
+        "markdown": "## [Sessions](#dashboard;id=62ec2d6b-23b3-4610-a6ee-208c6063d147)"
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 266,
+            "left": 1216,
+            "width": 304,
+            "height": 38
+        },
+        "tileFilter": {},
+        "markdown": "## [Duration](#dashboard;id=62ec2d6b-23b3-4610-a6ee-208c6063d148)"
+    }, {
+        "name": "Markdown",
+        "tileType": "MARKDOWN",
+        "configured": true,
+        "bounds": {
+            "top": 266,
+            "left": 1520,
+            "width": 304,
+            "height": 38
+        },
+        "tileFilter": {},
+        "markdown": "## Errors"
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 76,
+            "left": 1216,
+            "width": 304,
+            "height": 152
+        },
+        "tileFilter": {},
+        "customName": "Duration",
+        "query": "select avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyApp\"  usersession.ip is not null ipClause",
+        "type": "SINGLE_VALUE",
+        "timeFrameShift": "dynamic",
+        "limit": 50
+    }]
+}

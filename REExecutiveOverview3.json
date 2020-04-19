@@ -14,8 +14,7 @@
         },
         "dashboardFilter": {
             "timeframe": "l_2_HOURS"
-        },
-        "tags": ["Executive", "Overview"]
+        }
     },
     "tiles": [{
         "name": "User Sessions Query",

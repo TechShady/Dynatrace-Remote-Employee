@@ -312,7 +312,7 @@
         },
         "tileFilter": {},
         "customName": "Requests",
-        "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", count(userSessionId) as \"Requests\" from usersession where useraction.application is not null ipClause",
+        "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"8m\") as \"Time\", count(userSessionId) as \"Requests\" from usersession where useraction.application is not null ipClause",
         "type": "LINE_CHART",
         "visualizationConfig": {
             "hasAxisBucketing": true
@@ -330,7 +330,7 @@
         },
         "tileFilter": {},
         "customName": "Duration",
-        "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", avg(useraction.duration) as \"Duration\" from usersession where useraction.application is not null ipClause",
+        "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"8m\") as \"Time\", avg(useraction.duration) as \"Duration\" from usersession where useraction.application is not null ipClause",
         "type": "LINE_CHART",
         "visualizationConfig": {
             "hasAxisBucketing": true
@@ -348,7 +348,7 @@
         },
         "tileFilter": {},
         "customName": "Errors",
-        "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", sum(totalErrorCount) as \"Errors\" from usersession where useraction.application is not null ipClause",
+        "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"8m\") as \"Time\", sum(totalErrorCount) as \"Errors\" from usersession where useraction.application is not null ipClause",
         "type": "LINE_CHART",
         "visualizationConfig": {
             "hasAxisBucketing": true
@@ -486,7 +486,7 @@
         },
         "tileFilter": {},
         "customName": "Network",
-        "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"5m\") as \"Time\", avg(useraction.networkTime) as \"Network\" from usersession where useraction.application is not null ipClause",
+        "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"8m\") as \"Time\", avg(useraction.networkTime) as \"Network\" from usersession where useraction.application is not null ipClause",
         "type": "LINE_CHART",
         "visualizationConfig": {
             "hasAxisBucketing": true

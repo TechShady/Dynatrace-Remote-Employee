@@ -492,5 +492,82 @@
             "hasAxisBucketing": true
         },
         "limit": 50
-    }]
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 1900,
+        "width": 380,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Requests by OS",
+      "query": "Select osVersion, count(*) FROM usersession where city is not null  group by osversion order by count(*) DESC LIMIT 10",
+      "type": "PIE_CHART",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 266,
+        "left": 1900,
+        "width": 380,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Duration by OS",
+      "query": "Select osVersion, avg(useraction.duration) FROM usersession where osVersion is not null  group by osVersion order by avg(useraction.duration) DESC LIMIT 10",
+      "type": "PIE_CHART",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 532,
+        "left": 1900,
+        "width": 380,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Network Time by OS",
+      "query": "SELECT osVersion, AVG(useraction.networkTime) FROM usersession where osVersion is not null  GROUP BY osVersion Order By AVG(useraction.networkTime) DESC",
+      "type": "PIE_CHART",
+      "limit": 50
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 798,
+        "left": 1900,
+        "width": 380,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Errors by OS",
+      "query": "Select osVersion, sum(useraction.errorCount) FROM usersession where osVersion is not null and useraction.errorCount>0  group by osVersion order by sum(useraction.errorCount) DESC LIMIT 10",
+      "type": "PIE_CHART",
+      "limit": 50
+    }
+]
 }

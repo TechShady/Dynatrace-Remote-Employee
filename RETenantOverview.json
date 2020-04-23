@@ -499,7 +499,13 @@
       "configured": true,
       "bounds": {
         "top": 0,
-        "left": 1900,
+        "left":     {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 1938‬,
         "width": 380,
         "height": 266
       },
@@ -518,7 +524,7 @@
       "configured": true,
       "bounds": {
         "top": 266,
-        "left": 1900,
+        "left": 1938,
         "width": 380,
         "height": 266
       },
@@ -537,7 +543,7 @@
       "configured": true,
       "bounds": {
         "top": 532,
-        "left": 1900,
+        "left": 1938,
         "width": 380,
         "height": 266
       },
@@ -556,7 +562,7 @@
       "configured": true,
       "bounds": {
         "top": 798,
-        "left": 1900,
+        "left": 1938,
         "width": 380,
         "height": 266
       },

@@ -119,7 +119,7 @@
       },
       "customName": "\u2620",
       "query": "select distinct name, sum(errorCount) as \"Errors\" from useraction where useraction.application=\"MyApp\" ipClause order by sum(errorCount) DESC",
-      "type": "COLUMN_CHART"
+      "type": "LINE_CHART"
     },
     {
       "name": "Top User Actions",
@@ -244,7 +244,7 @@
       },
       "customName": "\u2620",
       "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", sum(errorcount) as \"Errors\" FROM useraction where useraction.application=\"MyApp\" ipClause ",
-      "type": "COLUMN_CHART"
+      "type": "LINE_CHART"
     }
   ]
 }

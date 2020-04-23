@@ -230,7 +230,7 @@
       },
       "customName": "Sessions",
       "query": "Select DISTINCT DATETIME(starttime, \"HH:mm\", \"2m\") as \"Time\", count(usersessionid) as \"Sessions\" from usersession where useraction.application IS NOT NULL ipClause ",
-      "type": "COLUMN_CHART",
+      "type": "LINE_CHART",
       "visualizationConfig": {
         "hasAxisBucketing": true
       },

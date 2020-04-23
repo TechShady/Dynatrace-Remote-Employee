@@ -175,7 +175,7 @@
         "tileFilter": {},
         "customName": "Satisfied Users",
         "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"1m\") as \"Time\", count(*) as \"Satisfied Users\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"SATISFIED\" ipClause",
-        "type": "COLUMN_CHART",
+        "type": "LINE_CHART",
         "visualizationConfig": {
             "hasAxisBucketing": true
         },

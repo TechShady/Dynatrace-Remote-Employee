@@ -174,7 +174,7 @@
         "tileFilter": {},
         "customName": "Sessions",
         "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"1m\") as \"Time\", count(*) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and ip is not null ipClause",
-        "type": "COLUMN_CHART",
+        "type": "LINE_CHART",
         "visualizationConfig": {
             "hasAxisBucketing": true
         },

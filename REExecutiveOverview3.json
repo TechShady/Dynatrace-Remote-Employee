@@ -174,7 +174,7 @@
         "tileFilter": {},
         "customName": "Frustrated Users",
         "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"1m\") as \"Time\", count(*) as \"Frustrated Users\" FROM usersession where userExperienceScore=\"FRUSTRATED\" ipClause",
-        "type": "COLUMN_CHART",
+        "type": "LINE_CHART",
         "visualizationConfig": {
             "hasAxisBucketing": true
         },

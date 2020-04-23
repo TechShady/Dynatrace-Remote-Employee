@@ -174,7 +174,7 @@
         "tileFilter": {},
         "customName": "Tolerated Users",
         "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"1m\") as \"Time\", count(*) as \"Tolerated Users\" FROM usersession where userExperienceScore=\"TOLERATED\" ipClause",
-        "type": "COLUMN_CHART",
+        "type": "LINE_CHART",
         "visualizationConfig": {
             "hasAxisBucketing": true
         },

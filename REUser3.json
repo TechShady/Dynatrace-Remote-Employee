@@ -227,7 +227,7 @@
       },
       "customName": "Session Duration",
       "query": "Select DISTINCT DATETIME(starttime, \"HH:mm\", \"2m\") as \"Time\", avg(duration) as \"Session Duration\" from usersession where useraction.application IS NOT NULL ipClause ",
-      "type": "COLUMN_CHART",
+      "type": "LINE_CHART",
       "visualizationConfig": {
         "hasAxisBucketing": true
       },

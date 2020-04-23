@@ -227,7 +227,7 @@
       },
       "customName": "Errors",
       "query": "Select DISTINCT DATETIME(starttime, \"HH:mm\", \"2m\") as \"Time\", sum(totalErrorCount) as \"Errors\" from usersession where useraction.application IS NOT NULL ipClause ",
-      "type": "COLUMN_CHART",
+      "type": "LINE_CHART",
       "visualizationConfig": {
         "hasAxisBucketing": true
       },

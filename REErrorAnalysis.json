@@ -118,7 +118,7 @@
         "managementZone": null
       },
       "customName": "\u2620",
-      "query": "select distinct name, sum(errorCount) as \"Errors\" from useraction where useraction.application=\"MyApp\" ipClause order by sum(errorCount) DESC",
+      "query": "select distinct useraction.name, sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" ipClause order by sum(useraction.errorCount) DESC",
       "type": "LINE_CHART"
     },
     {
@@ -243,7 +243,7 @@
         "managementZone": null
       },
       "customName": "\u2620",
-      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", sum(errorcount) as \"Errors\" FROM useraction where useraction.application=\"MyApp\" ipClause ",
+      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", sum(useraction.errorcount) as \"Errors\" FROM usersession where useraction.application=\"MyApp\" ipClause ",
       "type": "LINE_CHART"
     }
   ]

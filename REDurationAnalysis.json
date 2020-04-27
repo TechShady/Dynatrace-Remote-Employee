@@ -134,7 +134,7 @@
         "managementZone": null
       },
       "customName": "\u23f1",
-      "query": "select distinct name, avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyApp\" ipClause order by Duration DESC",
+      "query": "select distinct useraction.name, avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" ipClause order by Duration DESC",
       "type": "LINE_CHART",
       "visualizationConfig": {
         "hasAxisBucketing": true

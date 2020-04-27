@@ -137,7 +137,7 @@
         "type": "PIE_CHART",
         "limit": 50
     }, {
-        "name": "Graphs \u25bc",
+        "name": "Overtime Graphs \u25bc",
         "tileType": "HEADER",
         "configured": true,
         "bounds": {

@@ -29,7 +29,7 @@
         },
         "tileFilter": {},
         "customName": " Satisfied Users",
-        "query": "select count(usersessionid) as \"Users\" from usersession where useraction.application=\"MyApp\" ipClause and userExperienceScore=\"SATISFIED\"",
+        "query": "select count(usersessionid) as \"Users\" from usersession where useraction.application=\"Concur App\" ipClause and userExperienceScore=\"SATISFIED\"",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic",
         "limit": 50
@@ -45,7 +45,7 @@
         },
         "tileFilter": {},
         "customName": " Tolerated Users",
-        "query": "select count(usersessionid) as \"Users\" from usersession where useraction.application=\"MyApp\" ipClause and userExperienceScore=\"TOLERATED\"",
+        "query": "select count(usersessionid) as \"Users\" from usersession where useraction.application=\"Concur App\" ipClause and userExperienceScore=\"TOLERATED\"",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic",
         "limit": 50
@@ -61,7 +61,7 @@
         },
         "tileFilter": {},
         "customName": " Frustrated Users",
-        "query": "select count(usersessionid) as \"Users\" from usersession where useraction.application=\"MyApp\" ipClause and userExperienceScore=\"FRUSTRATED\"",
+        "query": "select count(usersessionid) as \"Users\" from usersession where useraction.application=\"Concur App\" ipClause and userExperienceScore=\"FRUSTRATED\"",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic",
         "limit": 50
@@ -77,7 +77,7 @@
         },
         "tileFilter": {},
         "customName": " Errors",
-        "query": "select sum(totalErrorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" ipClause",
+        "query": "select sum(totalErrorCount) as \"Errors\" from usersession where useraction.application=\"Concur App\" ipClause",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic",
         "limit": 50
@@ -86,14 +86,14 @@
         "tileType": "DTAQL",
         "configured": true,
         "bounds": {
-            "top": 456,
+            "top": 646,
             "left": 0,
             "width": 456,
             "height": 266
         },
         "tileFilter": {},
         "customName": "Duration by IP",
-        "query": "Select ip, avg(useraction.duration) FROM usersession where useraction.application=\"MyApp\" ipClause group by IP order by avg(useraction.duration) DESC LIMIT 10",
+        "query": "Select ip, avg(useraction.duration) FROM usersession where useraction.application=\"Concur App\" ipClause group by IP order by avg(useraction.duration) DESC LIMIT 10",
         "type": "PIE_CHART",
         "limit": 50
     }, {
@@ -101,14 +101,14 @@
         "tileType": "DTAQL",
         "configured": true,
         "bounds": {
-            "top": 456,
+            "top": 646,
             "left": 456,
             "width": 456,
             "height": 266
         },
         "tileFilter": {},
         "customName": "Duration by ISP",
-        "query": "Select isp, avg(useraction.duration) FROM usersession where useraction.application=\"MyApp\" ipClause group by IsP order by avg(useraction.duration) DESC LIMIT 10",
+        "query": "Select isp, avg(useraction.duration) FROM usersession where useraction.application=\"Concur App\" ipClause group by IsP order by avg(useraction.duration) DESC LIMIT 10",
         "type": "PIE_CHART",
         "limit": 50
     }, {
@@ -116,14 +116,14 @@
         "tileType": "DTAQL",
         "configured": true,
         "bounds": {
-            "top": 456,
+            "top": 646,
             "left": 1368,
             "width": 456,
             "height": 266
         },
         "tileFilter": {},
         "customName": "Duration by City",
-        "query": "Select city, avg(useraction.duration) FROM usersession where useraction.application=\"MyApp\" ipClause group by city order by avg(useraction.duration) DESC LIMIT 10",
+        "query": "Select city, avg(useraction.duration) FROM usersession where useraction.application=\"Concur App\" ipClause group by city order by avg(useraction.duration) DESC LIMIT 10",
         "type": "PIE_CHART",
         "limit": 50
     }, {
@@ -131,14 +131,14 @@
         "tileType": "DTAQL",
         "configured": true,
         "bounds": {
-            "top": 456,
+            "top": 646,
             "left": 912,
             "width": 456,
             "height": 266
         },
         "tileFilter": {},
         "customName": "Duration by Browser",
-        "query": "Select browserfamily, avg(useraction.duration) FROM usersession where useraction.application=\"MyApp\" ipClause group by browserfamily order by avg(useraction.duration) DESC LIMIT 10",
+        "query": "Select browserfamily, avg(useraction.duration) FROM usersession where useraction.application=\"Concur App\" ipClause group by browserfamily order by avg(useraction.duration) DESC LIMIT 10",
         "type": "PIE_CHART",
         "limit": 50
     }, {
@@ -146,14 +146,14 @@
         "tileType": "DTAQL",
         "configured": true,
         "bounds": {
-            "top": 988,
+            "top": 1178,
             "left": 0,
             "width": 456,
             "height": 266
         },
         "tileFilter": {},
         "customName": "Errors by IP",
-        "query": "Select ip, sum(totalErrorCount) FROM usersession where useraction.application=\"MyApp\" ipClause and totalErrorCount>0 group by IP order by sum(totalErrorCount) DESC LIMIT 10",
+        "query": "Select ip, sum(totalErrorCount) FROM usersession where useraction.application=\"Concur App\" ipClause and totalErrorCount>0 group by IP order by sum(totalErrorCount) DESC LIMIT 10",
         "type": "PIE_CHART",
         "limit": 50
     }, {
@@ -161,14 +161,14 @@
         "tileType": "DTAQL",
         "configured": true,
         "bounds": {
-            "top": 988,
+            "top": 1178,
             "left": 456,
             "width": 456,
             "height": 266
         },
         "tileFilter": {},
         "customName": "Errors by ISP",
-        "query": "Select isp, sum(totalErrorCount) FROM usersession where useraction.application=\"MyApp\" ipClause and totalErrorCount>0 group by IsP order by sum(totalErrorCount) DESC LIMIT 10",
+        "query": "Select isp, sum(totalErrorCount) FROM usersession where useraction.application=\"Concur App\" ipClause and totalErrorCount>0 group by IsP order by sum(totalErrorCount) DESC LIMIT 10",
         "type": "PIE_CHART",
         "limit": 50
     }, {
@@ -176,14 +176,14 @@
         "tileType": "DTAQL",
         "configured": true,
         "bounds": {
-            "top": 988,
+            "top": 1178,
             "left": 912,
             "width": 456,
             "height": 266
         },
         "tileFilter": {},
         "customName": "Errors by Browser",
-        "query": "Select browserFamily, sum(totalErrorCount) FROM usersession where useraction.application=\"MyApp\" ipClause and totalErrorCount>0 group by browserFamily order by sum(totalErrorCount) DESC LIMIT 10",
+        "query": "Select browserFamily, sum(totalErrorCount) FROM usersession where useraction.application=\"Concur App\" ipClause and totalErrorCount>0 group by browserFamily order by sum(totalErrorCount) DESC LIMIT 10",
         "type": "PIE_CHART",
         "limit": 50
     }, {
@@ -191,55 +191,55 @@
         "tileType": "DTAQL",
         "configured": true,
         "bounds": {
-            "top": 988,
+            "top": 1178,
             "left": 1368,
             "width": 456,
             "height": 266
         },
         "tileFilter": {},
         "customName": "Errors by City",
-        "query": "Select city, sum(totalErrorCount) FROM usersession where useraction.application=\"MyApp\" ipClause and totalErrorCount>0 group by city order by sum(totalErrorCount) DESC LIMIT 10",
+        "query": "Select city, sum(totalErrorCount) FROM usersession where useraction.application=\"Concur App\" ipClause and totalErrorCount>0 group by city order by sum(totalErrorCount) DESC LIMIT 10",
         "type": "PIE_CHART",
         "limit": 50
     }, {
-        "name": "Graphs and Portal Links ▼",
+        "name": "Overtime Graphs \u25bc",
         "tileType": "HEADER",
         "configured": true,
         "bounds": {
-            "top": 1254,
+            "top": 1444,
             "left": 0,
             "width": 418,
             "height": 38
         },
         "tileFilter": {}
     }, {
-        "name": "Overview Links ▼",
+        "name": "Overview Links \u25bc",
         "tileType": "HEADER",
         "configured": true,
         "bounds": {
-            "top": 1596,
+            "top": 1786,
             "left": 0,
             "width": 570,
             "height": 38
         },
         "tileFilter": {}
     }, {
-        "name": "Compare Links ▼",
+        "name": "Compare Links \u25bc",
         "tileType": "HEADER",
         "configured": true,
         "bounds": {
-            "top": 1596,
+            "top": 1786,
             "left": 570,
             "width": 570,
             "height": 38
         },
         "tileFilter": {}
     }, {
-        "name": "Analysis Links ▼",
+        "name": "Analysis Links \u25bc",
         "tileType": "HEADER",
         "configured": true,
         "bounds": {
-            "top": 1596,
+            "top": 1786,
             "left": 1140,
             "width": 570,
             "height": 38
@@ -250,7 +250,7 @@
         "tileType": "MARKDOWN",
         "configured": true,
         "bounds": {
-            "top": 1634,
+            "top": 1824,
             "left": 0,
             "width": 570,
             "height": 494
@@ -262,7 +262,7 @@
         "tileType": "MARKDOWN",
         "configured": true,
         "bounds": {
-            "top": 1634,
+            "top": 1824,
             "left": 570,
             "width": 570,
             "height": 494
@@ -274,7 +274,7 @@
         "tileType": "MARKDOWN",
         "configured": true,
         "bounds": {
-            "top": 1634,
+            "top": 1824,
             "left": 1140,
             "width": 570,
             "height": 494
@@ -305,7 +305,7 @@
         },
         "tileFilter": {},
         "customName": " Duration",
-        "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" ipClause",
+        "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"Concur App\" ipClause",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic",
         "limit": 50
@@ -321,7 +321,7 @@
         },
         "tileFilter": {},
         "customName": " Network",
-        "query": "select avg(useraction.networkTime) as \"Network\" from usersession where useraction.application=\"MyApp\" ipClause",
+        "query": "select avg(useraction.networkTime) as \"Network\" from usersession where useraction.application=\"Concur App\" ipClause",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic",
         "limit": 50
@@ -330,14 +330,14 @@
         "tileType": "DTAQL",
         "configured": true,
         "bounds": {
-            "top": 722,
+            "top": 912,
             "left": 0,
             "width": 456,
             "height": 266
         },
         "tileFilter": {},
         "customName": "Network by IP",
-        "query": "Select ip, avg(useraction.networktime) FROM usersession where useraction.application=\"MyApp\" ipClause group by IP order by avg(useraction.networktime) DESC LIMIT 10",
+        "query": "Select ip, avg(useraction.networktime) FROM usersession where useraction.application=\"Concur App\" ipClause group by IP order by avg(useraction.networktime) DESC LIMIT 10",
         "type": "PIE_CHART",
         "limit": 50
     }, {
@@ -345,14 +345,14 @@
         "tileType": "DTAQL",
         "configured": true,
         "bounds": {
-            "top": 722,
+            "top": 912,
             "left": 456,
             "width": 456,
             "height": 266
         },
         "tileFilter": {},
         "customName": "Network by ISP",
-        "query": "Select isp, avg(useraction.networkTime) FROM usersession where useraction.application=\"MyApp\" ipClause group by IsP order by avg(useraction.networktime) DESC LIMIT 10",
+        "query": "Select isp, avg(useraction.networkTime) FROM usersession where useraction.application=\"Concur App\" ipClause group by IsP order by avg(useraction.networktime) DESC LIMIT 10",
         "type": "PIE_CHART",
         "limit": 50
     }, {
@@ -360,14 +360,14 @@
         "tileType": "DTAQL",
         "configured": true,
         "bounds": {
-            "top": 722,
+            "top": 912,
             "left": 912,
             "width": 456,
             "height": 266
         },
         "tileFilter": {},
         "customName": "Network by Browser",
-        "query": "Select browserfamily, avg(useraction.networkTime) FROM usersession where useraction.application=\"MyApp\" ipClause group by browserfamily order by avg(useraction.networktime) DESC LIMIT 10",
+        "query": "Select browserfamily, avg(useraction.networkTime) FROM usersession where useraction.application=\"Concur App\" ipClause group by browserfamily order by avg(useraction.networktime) DESC LIMIT 10",
         "type": "PIE_CHART",
         "limit": 50
     }, {
@@ -375,14 +375,14 @@
         "tileType": "DTAQL",
         "configured": true,
         "bounds": {
-            "top": 722,
+            "top": 912,
             "left": 1368,
             "width": 456,
             "height": 266
         },
         "tileFilter": {},
         "customName": "Network by City",
-        "query": "Select city, avg(useraction.networkTime) FROM usersession where useraction.application=\"MyApp\" ipClause group by city order by avg(useraction.networktime) DESC LIMIT 10",
+        "query": "Select city, avg(useraction.networkTime) FROM usersession where useraction.application=\"Concur App\" ipClause group by city order by avg(useraction.networktime) DESC LIMIT 10",
         "type": "PIE_CHART",
         "limit": 50
     }, {
@@ -390,14 +390,14 @@
         "tileType": "DTAQL",
         "configured": true,
         "bounds": {
-            "top": 190,
+            "top": 380,
             "left": 0,
             "width": 456,
             "height": 266
         },
         "tileFilter": {},
         "customName": "Requests by IP",
-        "query": "Select ip, count(*) FROM usersession where useraction.application=\"MyApp\" ipClause group by IP order by count(*) DESC LIMIT 10",
+        "query": "Select ip, count(*) FROM usersession where useraction.application=\"Concur App\" ipClause group by IP order by count(*) DESC LIMIT 10",
         "type": "PIE_CHART",
         "limit": 50
     }, {
@@ -405,14 +405,14 @@
         "tileType": "DTAQL",
         "configured": true,
         "bounds": {
-            "top": 190,
+            "top": 380,
             "left": 456,
             "width": 456,
             "height": 266
         },
         "tileFilter": {},
         "customName": "Requests by ISP",
-        "query": "Select isp, count(*) FROM usersession where useraction.application=\"MyApp\" ipClause group by IsP order by count(*) DESC LIMIT 10",
+        "query": "Select isp, count(*) FROM usersession where useraction.application=\"Concur App\" ipClause group by IsP order by count(*) DESC LIMIT 10",
         "type": "PIE_CHART",
         "limit": 50
     }, {
@@ -420,14 +420,14 @@
         "tileType": "DTAQL",
         "configured": true,
         "bounds": {
-            "top": 190,
+            "top": 380,
             "left": 912,
             "width": 456,
             "height": 266
         },
         "tileFilter": {},
         "customName": "Requests by Browser",
-        "query": "Select browserfamily, count(*) FROM usersession where useraction.application=\"MyApp\" ipClause group by browserfamily order by count(*) DESC LIMIT 10",
+        "query": "Select browserfamily, count(*) FROM usersession where useraction.application=\"Concur App\" ipClause group by browserfamily order by count(*) DESC LIMIT 10",
         "type": "PIE_CHART",
         "limit": 50
     }, {
@@ -435,14 +435,14 @@
         "tileType": "DTAQL",
         "configured": true,
         "bounds": {
-            "top": 190,
+            "top": 380,
             "left": 1368,
             "width": 456,
             "height": 266
         },
         "tileFilter": {},
         "customName": "Requests by City",
-        "query": "Select city, count(*) FROM usersession where useraction.application=\"MyApp\" ipClause group by city order by count(*) DESC LIMIT 10",
+        "query": "Select city, count(*) FROM usersession where useraction.application=\"Concur App\" ipClause group by city order by count(*) DESC LIMIT 10",
         "type": "PIE_CHART",
         "limit": 50
     }, {
@@ -457,7 +457,7 @@
         },
         "tileFilter": {},
         "customName": " Requests",
-        "query": "select count(*) as \"Requests\" from usersession where useraction.application=\"MyApp\" ipClause",
+        "query": "select count(*) as \"Requests\" from usersession where useraction.application=\"Concur App\" ipClause",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic",
         "limit": 50
@@ -466,14 +466,14 @@
         "tileType": "DTAQL",
         "configured": true,
         "bounds": {
-            "top": 1292,
+            "top": 1482,
             "left": 0,
             "width": 570,
             "height": 304
         },
         "tileFilter": {},
         "customName": "Requests",
-        "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"8m\") as \"Time\", count(userSessionId) as \"Requests\" from usersession where useraction.application=\"MyApp\" ipClause",
+        "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"8m\") as \"Time\", count(userSessionId) as \"Requests\" from usersession where useraction.application=\"Concur App\" ipClause",
         "type": "LINE_CHART",
         "visualizationConfig": {
             "hasAxisBucketing": true
@@ -484,14 +484,14 @@
         "tileType": "DTAQL",
         "configured": true,
         "bounds": {
-            "top": 1292,
+            "top": 1482,
             "left": 570,
             "width": 570,
             "height": 304
         },
         "tileFilter": {},
         "customName": "Duration",
-        "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"8m\") as \"Time\", avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" ipClause",
+        "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"8m\") as \"Time\", avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"Concur App\" ipClause",
         "type": "LINE_CHART",
         "visualizationConfig": {
             "hasAxisBucketing": true
@@ -502,14 +502,14 @@
         "tileType": "DTAQL",
         "configured": true,
         "bounds": {
-            "top": 1292,
+            "top": 1482,
             "left": 1140,
             "width": 570,
             "height": 304
         },
         "tileFilter": {},
         "customName": "Network",
-        "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"8m\") as \"Time\", avg(useraction.networkTime) as \"Network\" from usersession where useraction.application=\"MyApp\" ipClause",
+        "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"8m\") as \"Time\", avg(useraction.networkTime) as \"Network\" from usersession where useraction.application=\"Concur App\" ipClause",
         "type": "LINE_CHART",
         "visualizationConfig": {
             "hasAxisBucketing": true
@@ -520,14 +520,14 @@
         "tileType": "DTAQL",
         "configured": true,
         "bounds": {
-            "top": 1292,
+            "top": 1482,
             "left": 1710,
             "width": 570,
             "height": 304
         },
         "tileFilter": {},
         "customName": "Errors",
-        "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"8m\") as \"Time\", sum(totalErrorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" ipClause",
+        "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"8m\") as \"Time\", sum(totalErrorCount) as \"Errors\" from usersession where useraction.application=\"Concur App\" ipClause",
         "type": "LINE_CHART",
         "visualizationConfig": {
             "hasAxisBucketing": true
@@ -538,15 +538,119 @@
         "tileType": "DTAQL",
         "configured": true,
         "bounds": {
-            "top": 456,
+            "top": 646,
             "left": 1824,
             "width": 456,
             "height": 266
         },
         "tileFilter": {},
         "customName": "Requests by OS",
-        "query": "Select osVersion, count(*) FROM usersession where useraction.application=\"MyApp\" ipClause group by osVersion order by count(*) DESC LIMIT 10",
+        "query": "Select osVersion, count(*) FROM usersession where useraction.application=\"Concur App\" ipClause group by osVersion order by count(*) DESC LIMIT 10",
         "type": "PIE_CHART",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 380,
+            "left": 1824,
+            "width": 456,
+            "height": 266
+        },
+        "tileFilter": {},
+        "customName": "Duration by OS",
+        "query": "Select osVersion, avg(useraction.duration) FROM usersession where useraction.application=\"Concur App\" ipClause group by osVersion order by avg(useraction.duration) DESC LIMIT 10",
+        "type": "PIE_CHART",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 912,
+            "left": 1824,
+            "width": 456,
+            "height": 266
+        },
+        "tileFilter": {},
+        "customName": "Network by OS",
+        "query": "Select osVersion, avg(useraction.networkTime) FROM usersession where useraction.application=\"Concur App\" ipClause group by osVersion order by avg(useraction.networktime) DESC LIMIT 10",
+        "type": "PIE_CHART",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 1178,
+            "left": 1824,
+            "width": 456,
+            "height": 266
+        },
+        "tileFilter": {},
+        "customName": "Errors by OS",
+        "query": "Select osVersion, sum(totalErrorCount) FROM usersession where useraction.application=\"Concur App\" ipClause and totalErrorCount>0 group by osVersion order by sum(totalErrorCount) DESC LIMIT 10",
+        "type": "PIE_CHART",
+        "limit": 50
+    }, {
+        "name": "Distribution Charts \u25bc",
+        "tileType": "HEADER",
+        "configured": true,
+        "bounds": {
+            "top": 342,
+            "left": 0,
+            "width": 418,
+            "height": 38
+        },
+        "tileFilter": {}
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 190,
+            "left": 456,
+            "width": 456,
+            "height": 152
+        },
+        "tileFilter": {},
+        "customName": "Unique ISPs",
+        "query": "select count(distinct isp) as \"Unique ISPs\" from usersession where useraction.application=\"Concur App\" ipClause and isp is not null ",
+        "type": "SINGLE_VALUE",
+        "timeFrameShift": "dynamic",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 190,
+            "left": 912,
+            "width": 456,
+            "height": 152
+        },
+        "tileFilter": {},
+        "customName": "Unique Browsers",
+        "query": "select count(distinct browserFamily) as \"Unique Browsers\" from usersession where useraction.application=\"Concur App\" ipClause and browserfamily is not null ",
+        "type": "SINGLE_VALUE",
+        "timeFrameShift": "dynamic",
+        "limit": 50
+    }, {
+        "name": "User Sessions Query",
+        "tileType": "DTAQL",
+        "configured": true,
+        "bounds": {
+            "top": 190,
+            "left": 1368,
+            "width": 456,
+            "height": 152
+        },
+        "tileFilter": {},
+        "customName": "Unique Cities",
+        "query": "select count(distinct city) as \"Unique Cities\" from usersession where useraction.application=\"Concur App\" ipClause and city is not null ",
+        "type": "SINGLE_VALUE",
+        "timeFrameShift": "dynamic",
         "limit": 50
     }, {
         "name": "User Sessions Query",
@@ -556,42 +660,29 @@
             "top": 190,
             "left": 1824,
             "width": 456,
-            "height": 266
+            "height": 152
         },
         "tileFilter": {},
-        "customName": "Duration by OS",
-        "query": "Select osVersion, avg(useraction.duration) FROM usersession where useraction.application=\"MyApp\" ipClause group by osVersion order by avg(useraction.duration) DESC LIMIT 10",
-        "type": "PIE_CHART",
+        "customName": "Unique Operating Systems",
+        "query": "select count(distinct osVersion) as \"Unique Operating Systems\" from usersession where useraction.application=\"Concur App\" ipClause and osVersion is not null ",
+        "type": "SINGLE_VALUE",
+        "timeFrameShift": "dynamic",
         "limit": 50
     }, {
         "name": "User Sessions Query",
         "tileType": "DTAQL",
         "configured": true,
         "bounds": {
-            "top": 722,
-            "left": 1824,
+            "top": 190,
+            "left": 0,
             "width": 456,
-            "height": 266
+            "height": 152
         },
         "tileFilter": {},
-        "customName": "Network by OS",
-        "query": "Select osVersion, avg(useraction.networkTime) FROM usersession where useraction.application=\"MyApp\" ipClause group by osVersion order by avg(useraction.networktime) DESC LIMIT 10",
-        "type": "PIE_CHART",
-        "limit": 50
-    }, {
-        "name": "User Sessions Query",
-        "tileType": "DTAQL",
-        "configured": true,
-        "bounds": {
-            "top": 988,
-            "left": 1824,
-            "width": 456,
-            "height": 266
-        },
-        "tileFilter": {},
-        "customName": "Errors by OS",
-        "query": "Select osVersion, sum(totalErrorCount) FROM usersession where useraction.application=\"MyApp\" ipClause and totalErrorCount>0 group by osVersion order by sum(totalErrorCount) DESC LIMIT 10",
-        "type": "PIE_CHART",
+        "customName": "Unique IPs",
+        "query": "select count(distinct ip) as \"Unique IPs\" from usersession where useraction.application=\"Concur App\" ipClause and ip is not null ",
+        "type": "SINGLE_VALUE",
+        "timeFrameShift": "dynamic",
         "limit": 50
     }]
 }

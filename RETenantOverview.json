@@ -660,7 +660,7 @@
         },
         "tileFilter": {},
         "customName": "Requests",
-        "query": "select count(usersessionid) as \"Requests\" from usersession where ipis not null ipClause",
+        "query": "select count(usersessionid) as \"Requests\" from usersession where ip is not null ipClause",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic",
         "limit": 50
@@ -724,7 +724,7 @@
         },
         "tileFilter": {},
         "customName": "Duration",
-        "query": "select avg(duration) as \"Duration\" from useraction where ip is not null ipClause",
+        "query": "select avg(duration) as \"Duration\" from useraction where name is not null ipClause",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic",
         "limit": 50
@@ -740,7 +740,7 @@
         },
         "tileFilter": {},
         "customName": "Network",
-        "query": "select avg(networkTime) FROM useraction where ip is not null ipClause",
+        "query": "select avg(networkTime) FROM useraction where name is not null ipClause",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic",
         "limit": 50

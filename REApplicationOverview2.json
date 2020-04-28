@@ -162,7 +162,7 @@
         "managementZone": null
       },
       "customName": "Duration by Browser",
-      "query": "Select browserfamily, avg(useraction.duration) FROM usersession where useraction.application=\"MyApp\" ipClause group by browserfamily order by avg(useraction.duration) DESC LIMIT 10",
+      "query": "Select browserMajorVersion, avg(useraction.duration) FROM usersession where useraction.application=\"MyApp\" ipClause group by browserMajorVersion order by avg(useraction.duration) DESC LIMIT 10",
       "type": "PIE_CHART",
       "limit": 50
     },

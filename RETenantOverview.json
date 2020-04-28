@@ -73,7 +73,7 @@
         },
         "tileFilter": {},
         "customName": "Duration by Browser",
-        "query": "Select browserfamily, avg(useraction.duration) FROM usersession where browserfamily is not null ipClause group by browserfamily order by avg(useraction.duration) DESC LIMIT 10",
+        "query": "Select browserMajorVersion, avg(useraction.duration) FROM usersession where browserMajorVersion is not null ipClause group by browserMajorVersion order by avg(useraction.duration) DESC LIMIT 10",
         "type": "PIE_CHART",
         "limit": 50
     }, {
@@ -118,7 +118,7 @@
         },
         "tileFilter": {},
         "customName": "Errors by Browser",
-        "query": "Select browserFamily, sum(useraction.errorCount) FROM usersession where browserfamily is not null and useraction.errorCount>0 ipClause group by browserFamily order by sum(useraction.errorCount) DESC LIMIT 10",
+        "query": "Select browserFamily, sum(useraction.errorCount) FROM usersession where browserMajorVersion is not null and useraction.errorCount>0 ipClause group by browserFamily order by sum(useraction.errorCount) DESC LIMIT 10",
         "type": "PIE_CHART",
         "limit": 50
     }, {
@@ -281,7 +281,7 @@
         },
         "tileFilter": {},
         "customName": "Requests by Browser",
-        "query": "Select browserfamily, count(*) FROM usersession where browserfamily is not null ipClause group by browserfamily order by count(*) DESC LIMIT 10",
+        "query": "Select browserMajorVersion, count(*) FROM usersession where browserMajorVersion is not null ipClause group by browserMajorVersion order by count(*) DESC LIMIT 10",
         "type": "PIE_CHART",
         "limit": 50
     }, {
@@ -455,7 +455,7 @@
         },
         "tileFilter": {},
         "customName": "Network Time by Browser",
-        "query": "SELECT browserfamily, AVG(useraction.networkTime) FROM usersession where browserfamily is not null ipClause group BY browserFamily Order By AVG(useraction.networkTime) DESC",
+        "query": "SELECT browserMajorVersion, AVG(useraction.networkTime) FROM usersession where browserMajorVersion is not null ipClause group BY browserFamily Order By AVG(useraction.networkTime) DESC",
         "type": "PIE_CHART",
         "limit": 50
     }, {
@@ -611,7 +611,7 @@
         },
         "tileFilter": {},
         "customName": "Unique Browsers",
-        "query": "select count(distinct browserFamily) as \"Unique Browsers\" from usersession where browserfamily is not null ipClause",
+        "query": "select count(distinct browserFamily) as \"Unique Browsers\" from usersession where browserMajorVersion is not null ipClause",
         "type": "SINGLE_VALUE",
         "timeFrameShift": "dynamic",
         "limit": 50

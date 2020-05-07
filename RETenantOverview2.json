@@ -15,7 +15,7 @@
       "published": true
     },
     "dashboardFilter": {
-      "timeframe": "l_2_HOURS",
+      "timeframe": "-150m to -30m",
       "managementZone": null
     },
     "tags": [
